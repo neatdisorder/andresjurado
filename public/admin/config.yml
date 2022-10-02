@@ -27,8 +27,8 @@ collections:
         name: "categories"
         file: "settings/categories.md"
         fields:
-          - label: "Categorías"
-            name: "categories"
+          - label: "Listado de categorías"
+            name: "categories-list"
             widget: "list"
             - label: "Categoría"
               name: "category"
