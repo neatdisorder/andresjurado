@@ -27,13 +27,16 @@ collections:
         name: "categories"
         file: "settings/categories.md"
         fields:
-          - label: "Categoría"
-            name: "category"
-            widget: "object"
-            fields:
-              - {label: "Título ES", name: "title-es", widget: "string"}
-              - {label: "Título EN", name: "title-en", widget: "string"}
-              - {label: "Color", name: "color", widget: "color", default: "#FFFFFF"}
+          - label: "Categorías"
+            name: "categories"
+            widget: "list"
+            - label: "Categoría"
+              name: "category"
+              widget: "object"
+              fields:
+                - {label: "Título ES", name: "title-es", widget: "string"}
+                - {label: "Título EN", name: "title-en", widget: "string"}
+                - {label: "Color", name: "color", widget: "color", default: "#FFFFFF"}
   - name: "projects"
     label: "Projects"
     folder: "content/en/projects"
