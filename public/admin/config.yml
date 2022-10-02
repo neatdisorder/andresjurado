@@ -20,3 +20,23 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+  - name: "settings"
+    label: "Configuración"
+    files:
+      - label: "Categorías"
+        name: "categories"
+        file: "settings/categories.md"
+        fields:
+          - label: "Categoría"
+            name: "category"
+            widget: "object"
+            fields:
+              - {label: "Título ES", name: "title-es", widget: "string"}
+              - {label: "Título EN", name: "title-en", widget: "string"}
+              - {label: "Color", name: "color", widget: "color", default: "#FFFFFF"}
+  - name: "projects"
+    label: "Projects"
+    folder: "content/en/projects"
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
