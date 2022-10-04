@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: git-gateway #test-repo
   branch: main # Branch to update (optional; defaults to master)
 media_folder: public/img
 public_folder: img
@@ -30,16 +30,122 @@ collections:
           - label: "Listado de categorías"
             name: "categories-list"
             widget: "list"
-            - label: "Categoría"
-              name: "category"
-              widget: "object"
-              fields:
-                - {label: "Título ES", name: "title-es", widget: "string"}
-                - {label: "Título EN", name: "title-en", widget: "string"}
-                - {label: "Color", name: "color", widget: "color", default: "#FFFFFF"}
+            label_singular: "Categoría"
+            fields:
+              - label: "Categoría"
+                name: "category"
+                widget: "object"
+                fields:
+                  - { label: "Título ES", name: "title-es", widget: "string" }
+                  - { label: "Título EN", name: "title-en", widget: "string" }
+                  - { label: "Color", name: "color", widget: "color", default: "#FFFFFF" }
   - name: "projects"
     label: "Projects"
     folder: "content/en/projects"
     create: true
     fields:
-      - {label: "Título", name: "title", widget: "string"}
+      - { label: "Título", name: "title", widget: "string" }
+      - label: "Ficha técnica"
+        name: "specs"
+        widget: "list"
+        field: { label: "Elemento", name: "spec", widget: "string" }
+      - label: "Créditos"
+        name: "credits"
+        widget: "list"
+        fields: 
+          - label: "Crédito"
+            name: "credit"
+            widget: "object"
+            fields:
+              - { label: "Persona", name: "person", widget: "string" }
+              - { label: "Rol", name: "role", widget: "string" }
+      - label: "Contenido"
+        name: "content"
+        widget: "list"
+        types:
+          - label: "Bloque de texto"
+            name: "text-block"
+            widget: "object"
+            fields:
+              - { label: "Texto", name: "text", widget: "text" }
+          - label: "Bloque de imagen"
+            name: "image-block"
+            widget: "object"
+            fields:
+              - { label: "Imagen", name: "image", widget: "image" }
+          - label: "Bloque de título"
+            name: "title-block"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+          - label: "Bloque de embed Vimeo"
+            name: "vimeo-block"
+            widget: "object"
+            fields:
+              - { label: "URL", name: "url", widget: "string" }
+          - label: "Bloque de embed YouTube"
+            name: "youtube-block"
+            widget: "object"
+            fields:
+              - { label: "URL", name: "url", widget: "string" }
+          - label: "Bloque de links"
+            name: "links-block"
+            widget: "object"
+            fields:
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Texto", name: "link-text", widget: "string"}
+  - name: "proyectos"
+    label: "Proyectos"
+    folder: "content/es/proyectos"
+    create: true
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - label: "Ficha técnica"
+        name: "specs"
+        widget: "list"
+        field: { label: "Elemento", name: "spec", widget: "string" }
+      - label: "Créditos"
+        name: "credits"
+        widget: "list"
+        fields: 
+          - label: "Crédito"
+            name: "credit"
+            widget: "object"
+            fields:
+              - { label: "Persona", name: "person", widget: "string" }
+              - { label: "Rol", name: "role", widget: "string" }
+      - label: "Contenido"
+        name: "content"
+        widget: "list"
+        types:
+          - label: "Bloque de texto"
+            name: "text-block"
+            widget: "object"
+            fields:
+              - { label: "Texto", name: "text", widget: "text" }
+          - label: "Bloque de imagen"
+            name: "image-block"
+            widget: "object"
+            fields:
+              - { label: "Imagen", name: "image", widget: "image" }
+          - label: "Bloque de título"
+            name: "title-block"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+          - label: "Bloque de embed Vimeo"
+            name: "vimeo-block"
+            widget: "object"
+            fields:
+              - { label: "URL", name: "url", widget: "string" }
+          - label: "Bloque de embed YouTube"
+            name: "youtube-block"
+            widget: "object"
+            fields:
+              - { label: "URL", name: "url", widget: "string" }
+          - label: "Bloque de links"
+            name: "links-block"
+            widget: "object"
+            fields:
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Texto", name: "link-text", widget: "string"}
