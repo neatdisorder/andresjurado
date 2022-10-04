@@ -1,5 +1,6 @@
 ---
 title: Yarokamena
+category: Film
 specs:
   - "2022"
   - FILM

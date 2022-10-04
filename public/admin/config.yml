@@ -1,6 +1,7 @@
 backend:
   name: git-gateway #test-repo
   branch: main # Branch to update (optional; defaults to master)
+local_backend: true #Eliminar para hacer build en prod
 media_folder: public/img
 public_folder: img
 collections:
@@ -49,9 +50,10 @@ collections:
         name: "category"
         widget: "relation"
         collection: "settings"
-        file: "settings/categories.md"
-        value_field: "categories-list.category.title-en"
-        search_fields: ["categories-list.category.title-en"]
+        file: "categories"
+        value_field: "categories-list.*.category.title-en"
+        search_fields: ["categories-list.*.category.title-en"]
+        multiple: true
       - label: "Ficha técnica"
         name: "specs"
         widget: "list"
@@ -74,9 +76,7 @@ collections:
             name: "text-block"
             widget: "object"
             fields:
-              # ACÁ HAY CAMBIOS
               - { label: "Texto", name: "text", widget: "markdown", buttons: ["bold", "italic", "link"], modes: ["rich_text"], editor_components: [] }
-              # ACÁ TERMINAN LOS CAMBIOS
           - label: "Bloque de imagen"
             name: "image-block"
             widget: "object"
@@ -109,6 +109,14 @@ collections:
     create: true
     fields:
       - { label: "Título", name: "title", widget: "string" }
+      - label: "Categoría"
+        name: "category"
+        widget: "relation"
+        collection: "settings"
+        file: "categories"
+        value_field: "categories-list.*.category.title-es"
+        search_fields: ["categories-list.*.category.title-es"]
+        multiple: true
       - label: "Ficha técnica"
         name: "specs"
         widget: "list"
@@ -131,7 +139,7 @@ collections:
             name: "text-block"
             widget: "object"
             fields:
-              - { label: "Texto", name: "text", widget: "text" }
+              - { label: "Texto", name: "text", widget: "markdown", buttons: ["bold", "italic", "link"], modes: ["rich_text"], editor_components: [] }
           - label: "Bloque de imagen"
             name: "image-block"
             widget: "object"
