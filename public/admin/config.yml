@@ -1,7 +1,8 @@
 backend:
   name: git-gateway #test-repo
   branch: main # Branch to update (optional; defaults to master)
-local_backend: true #Eliminar para hacer build en prod
+local_backend: true # Eliminar para hacer build en prod
+# Server local: npx netlify-cms-proxy-server
 media_folder: public/img
 public_folder: img
 collections:
