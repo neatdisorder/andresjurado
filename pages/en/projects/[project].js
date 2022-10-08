@@ -1,24 +1,24 @@
-import React from 'react';
-import { Heading } from "@chakra-ui/react";
+import React from "react";
+import Menu from '../../../src/components/Menu';
 
-const project = ({ proyecto }) => {
+const project = ({ projectName }) => {
 
-    return (
-        <Heading>
-            { proyecto }
-        </Heading>
-    )
+  console.log(projectName);
 
+  return (
+    <>
+      <Menu />
+      <Project />
+    </>
+  )
 };
 
 export default project;
 
 export async function getServerSideProps(context) {
+  const projectName = context.params.project;
 
-    const proyecto = context.params.project;
-
-    return {
-      props: {proyecto}, // will be passed to the page component as props
-    }
-
-  }  
+  return {
+    props: { projectName },
+  };
+}

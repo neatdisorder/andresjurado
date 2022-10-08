@@ -1,10 +1,12 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import React from "react";
 import PropTypes from 'prop-types';
+import "@fontsource/mingzat";
+import theme from '../theme';
 
 const MyApp = ({ Component, pageProps }) => {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Component {...pageProps} />
     </ChakraProvider>
   );
