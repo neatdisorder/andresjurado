@@ -2,7 +2,7 @@
 categories-list:
   - category:
       color: "#009999"
-      title-es: Performacne
+      title-es: Performance
       title-en: Performance
   - category:
       color: "#ae2535"

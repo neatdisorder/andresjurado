@@ -5,6 +5,7 @@ module.exports = {
       loader: "frontmatter-markdown-loader",
       options: { mode: ["react-component"] },
     });
+    cfg.resolve.fallback = { fs: false, path: false };
     return cfg;
   },
 };

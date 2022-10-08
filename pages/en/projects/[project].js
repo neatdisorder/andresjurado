@@ -1,24 +1,38 @@
 import React from "react";
-import Menu from '../../../src/components/Menu';
+import Menu from "../../../src/components/Menu";
+import Project from "../../../src/components/Project";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
-const project = ({ projectName }) => {
-
-  console.log(projectName);
-
+const project = ({ projectData }) => {
   return (
     <>
       <Menu />
-      <Project />
+      <Project projectData={projectData}/>
     </>
-  )
+  );
 };
 
 export default project;
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const projectName = context.params.project;
+  const projectDirectory = path.join(process.cwd(), "content/en/projects");
+  const projectContent = matter(
+    fs.readFileSync(projectDirectory + "/" + projectName + ".md", 'utf8')
+  );
+
+  const projectData = projectContent.data;
 
   return {
-    props: { projectName },
+    props: { projectData },
   };
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: ['/en/projects/yarokamena'],
+    fallback: true
+  }
 }
