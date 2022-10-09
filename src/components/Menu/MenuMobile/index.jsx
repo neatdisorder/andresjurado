@@ -14,21 +14,15 @@ const MenuMobile = () => {
     <>
       <Accordion allowToggle>
         <AccordionItem>
-        <AccordionButton>
-          <Heading>ANDRÉS JURADO</Heading>
-          <HamburgerIcon />
-        </AccordionButton>
-        <AccordionPanel>
-            <Heading>
-                works
-            </Heading>
-            <Heading>
-                bio
-            </Heading>
-            <Heading>
-                en・es
-            </Heading>
-        </AccordionPanel>
+          <AccordionButton>
+            <Heading>ANDRÉS JURADO</Heading>
+            <HamburgerIcon />
+          </AccordionButton>
+          <AccordionPanel>
+            <Heading>works</Heading>
+            <Heading>bio</Heading>
+            <Heading>en・es</Heading>
+          </AccordionPanel>
         </AccordionItem>
       </Accordion>
     </>

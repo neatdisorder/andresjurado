@@ -25,7 +25,8 @@ credits:
       role: Sound design
 content:
   - type: text-block
-    text: This is the story of a Uitoto indigenous person who organized a resistance
+    text:
+      This is the story of a Uitoto indigenous person who organized a resistance
       to rubber exploitation at the beginning of the 20th century in Casa Arana.
       Yarokamena, invokes the spiritual and cosmic forces of war, releasing its
       destructive power from its container that ends up creating a spiral of
@@ -33,7 +34,8 @@ content:
       authorities for its potential to attract young people to revolt and
       function as a stimulus to resort to witchcraft.
   - type: text-block
-    text: "This story is told by Gerardo Sueche, councilor of the Uitoto peoples,
+    text:
+      "This story is told by Gerardo Sueche, councilor of the Uitoto peoples,
       going through filmic portraits of a delirious Amazon, invaded by
       technological ruins, dysfunctional antennas, ghost ships, and colonial
       ghosts housed in the oral memory of the survivors of this episode of

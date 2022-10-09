@@ -9,9 +9,9 @@ const Menu = () => {
       <Show below="sm">
         <MenuMobile />
       </Show>
-    <Show above="sm">
+      <Show above="sm">
         <MenuDesktop />
-    </Show>
+      </Show>
     </>
   );
 };

@@ -9,7 +9,7 @@ const project = ({ projectData }) => {
   return (
     <>
       <Menu />
-      <Project projectData={projectData}/>
+      <Project projectData={projectData} />
     </>
   );
 };
@@ -20,7 +20,7 @@ export async function getStaticProps(context) {
   const projectName = context.params.project;
   const projectDirectory = path.join(process.cwd(), "content/en/projects");
   const projectContent = matter(
-    fs.readFileSync(projectDirectory + "/" + projectName + ".md", 'utf8')
+    fs.readFileSync(projectDirectory + "/" + projectName + ".md", "utf8")
   );
 
   const projectData = projectContent.data;
@@ -32,7 +32,8 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   return {
-    paths: ['/en/projects/yarokamena'],
-    fallback: true
-  }
+    // WIP: Estas rutas tienen que actualizarse con todos los archivos que alla de MD en cada build.
+    paths: ["/en/projects/yarokamena"],
+    fallback: true,
+  };
 }

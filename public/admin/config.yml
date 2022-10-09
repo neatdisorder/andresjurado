@@ -40,7 +40,12 @@ collections:
                 fields:
                   - { label: "Título ES", name: "title-es", widget: "string" }
                   - { label: "Título EN", name: "title-en", widget: "string" }
-                  - { label: "Color", name: "color", widget: "color", default: "#FFFFFF" }
+                  - {
+                      label: "Color",
+                      name: "color",
+                      widget: "color",
+                      default: "#FFFFFF",
+                    }
   - name: "projects"
     label: "Projects"
     folder: "content/en/projects"
@@ -62,7 +67,7 @@ collections:
       - label: "Créditos"
         name: "credits"
         widget: "list"
-        fields: 
+        fields:
           - label: "Crédito"
             name: "credit"
             widget: "object"
@@ -77,7 +82,14 @@ collections:
             name: "text-block"
             widget: "object"
             fields:
-              - { label: "Texto", name: "text", widget: "markdown", buttons: ["bold", "italic", "link"], modes: ["rich_text"], editor_components: [] }
+              - {
+                  label: "Texto",
+                  name: "text",
+                  widget: "markdown",
+                  buttons: ["bold", "italic", "link"],
+                  modes: ["rich_text"],
+                  editor_components: [],
+                }
           - label: "Bloque de imagen"
             name: "image-block"
             widget: "object"
@@ -103,7 +115,7 @@ collections:
             widget: "object"
             fields:
               - { label: "URL", name: "url", widget: "string" }
-              - { label: "Texto", name: "link-text", widget: "string"}
+              - { label: "Texto", name: "link-text", widget: "string" }
   - name: "proyectos"
     label: "Proyectos"
     folder: "content/es/proyectos"
@@ -125,7 +137,7 @@ collections:
       - label: "Créditos"
         name: "credits"
         widget: "list"
-        fields: 
+        fields:
           - label: "Crédito"
             name: "credit"
             widget: "object"
@@ -140,7 +152,14 @@ collections:
             name: "text-block"
             widget: "object"
             fields:
-              - { label: "Texto", name: "text", widget: "markdown", buttons: ["bold", "italic", "link"], modes: ["rich_text"], editor_components: [] }
+              - {
+                  label: "Texto",
+                  name: "text",
+                  widget: "markdown",
+                  buttons: ["bold", "italic", "link"],
+                  modes: ["rich_text"],
+                  editor_components: [],
+                }
           - label: "Bloque de imagen"
             name: "image-block"
             widget: "object"
@@ -166,4 +185,4 @@ collections:
             widget: "object"
             fields:
               - { label: "URL", name: "url", widget: "string" }
-              - { label: "Texto", name: "link-text", widget: "string"}
+              - { label: "Texto", name: "link-text", widget: "string" }

@@ -1,8 +1,8 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import "@fontsource/mingzat";
-import theme from '../theme';
+import theme from "../theme";
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -14,7 +14,7 @@ const MyApp = ({ Component, pageProps }) => {
 
 MyApp.propTypes = {
   pageProps: PropTypes.object,
-  Component: PropTypes.func
+  Component: PropTypes.func,
 };
 
 export default MyApp;

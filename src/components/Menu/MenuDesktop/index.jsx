@@ -8,21 +8,13 @@ const MenuDesktop = () => {
         <Heading>ANDRÉS JURADO</Heading>
       </Box>
       <Box>
+        <Heading>bio</Heading>
+        <Heading>/</Heading>
         <Heading>
-            bio
+          obras ・ performance ・ film ・ exhibición ・ curaduría ・ publicación
         </Heading>
-        <Heading>
-            /
-        </Heading>
-        <Heading>
-            obras ・ performance ・ film ・ exhibición ・ curaduría ・ publicación
-        </Heading>
-        <Heading>
-            /
-        </Heading>
-        <Heading>
-            en ・ es
-        </Heading>
+        <Heading>/</Heading>
+        <Heading>en ・ es</Heading>
       </Box>
     </>
   );
