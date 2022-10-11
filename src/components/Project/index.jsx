@@ -1,9 +1,21 @@
 import React from "react";
-import { Heading } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import PropTypes from "prop-types";
+import ProjectInfo from "./ProjectInfo";
+import styles from "./styles";
 
 const Project = ({ projectData }) => {
-  return <Heading>{projectData.title}</Heading>;
+  console.log(projectData);
+
+  return (
+    <Box {...styles.projectContainer}>
+      <ProjectInfo
+        projectName={projectData.title}
+        projectSpecs={projectData.specs}
+        projectCredits={projectData.credits}
+      />
+    </Box>
+  );
 };
 
 Project.propTypes = {

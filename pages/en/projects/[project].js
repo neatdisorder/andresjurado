@@ -32,7 +32,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   return {
-    // WIP: Estas rutas tienen que actualizarse con todos los archivos que alla de MD en cada build.
+    // WIP: Estas rutas tienen que actualizarse con todos los archivos que haya de MD en cada build.
     paths: ["/en/projects/yarokamena"],
     fallback: true,
   };

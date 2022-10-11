@@ -6,22 +6,26 @@ import {
   AccordionItem,
   AccordionButton,
   AccordionPanel,
+  Flex
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import styles from './styles';
 
 const MenuMobile = () => {
   return (
     <>
       <Accordion allowToggle>
-        <AccordionItem>
-          <AccordionButton>
-            <Heading>ANDRÉS JURADO</Heading>
-            <HamburgerIcon />
+        <AccordionItem {...styles.accordionItem}>
+          <AccordionButton {...styles.accordionButton}>
+            <Flex {...styles.accordionButtonContainer}>
+              <Heading {...styles.heading}>ANDRÉS JURADO</Heading>
+              <HamburgerIcon {...styles.hamburgerIcon} />
+            </Flex>
           </AccordionButton>
-          <AccordionPanel>
-            <Heading>works</Heading>
-            <Heading>bio</Heading>
-            <Heading>en・es</Heading>
+          <AccordionPanel {...styles.accordionPanel}>
+            <Heading {...styles.headingMenu}>works</Heading>
+            <Heading {...styles.headingMenu}>bio</Heading>
+            <Heading {...styles.headingMenu}>en・es</Heading>
           </AccordionPanel>
         </AccordionItem>
       </Accordion>

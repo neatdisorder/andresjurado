@@ -1,15 +1,15 @@
 import React from "react";
 import MenuDesktop from "./MenuDesktop";
 import MenuMobile from "./MenuMobile";
-import { Show } from "@chakra-ui/react";
+import { Show, Hide } from "@chakra-ui/react";
 
 const Menu = () => {
   return (
     <>
-      <Show below="sm">
+      <Hide above="md">
         <MenuMobile />
-      </Show>
-      <Show above="sm">
+      </Hide>
+      <Show above="md">
         <MenuDesktop />
       </Show>
     </>
