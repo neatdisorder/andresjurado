@@ -13,14 +13,14 @@ const styles = {
   projectSpecs: {
     fontSize: { base: "12px", md: "17px", lg: "22px" },
     fontWeight: "400",
-    textTransform: "uppercase"
-  },
-  projectSpecsDots: {
-    fontSize: { base: "12px", md: "17px", lg: "22px" },
-    fontWeight: "400",
     textTransform: "uppercase",
+    _after: {
+      content: "'・'"
+    },
     _last: {
-        display: "none"
+      _after: {
+        content: "''"
+      }
     }
   },
   projectCredits: {
@@ -28,6 +28,9 @@ const styles = {
       fontSize: { base: "11px", md: "15px", lg: "20px" },
       fontFamily: "Roboto, sans-serif",
       fontWeight: "bold",
+      _after: {
+        content: "'・'"
+      }
     },
     regular: {
       fontSize: { base: "11px", md: "15px", lg: "20px" },
