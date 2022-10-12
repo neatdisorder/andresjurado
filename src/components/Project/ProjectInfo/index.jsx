@@ -5,10 +5,8 @@ import styles from './styles';
 
 const ProjectInfo = ({ projectName, projectSpecs, projectCredits }) => {
 
-  console.log(projectCredits);
-
   return (
-    <Box>
+    <Box {...styles.projectInfoContainer}>
       <Heading {...styles.projectNameHeading}>{projectName}</Heading>
       <Flex {...styles.specsContainer}>
         {projectSpecs.map((spec, key) => (

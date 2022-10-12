@@ -79,7 +79,7 @@ collections:
         widget: "list"
         types:
           - label: "Bloque de texto"
-            name: "text-block"
+            name: "textBlock"
             widget: "object"
             fields:
               - {
@@ -91,27 +91,27 @@ collections:
                   editor_components: [],
                 }
           - label: "Bloque de imagen"
-            name: "image-block"
+            name: "imageBlock"
             widget: "object"
             fields:
               - { label: "Imagen", name: "image", widget: "image" }
           - label: "Bloque de título"
-            name: "title-block"
+            name: "titleBlock"
             widget: "object"
             fields:
               - { label: "Título", name: "title", widget: "string" }
           - label: "Bloque de embed Vimeo"
-            name: "vimeo-block"
+            name: "vimeoBlock"
             widget: "object"
             fields:
               - { label: "URL", name: "url", widget: "string" }
           - label: "Bloque de embed YouTube"
-            name: "youtube-block"
+            name: "youtubeBlock"
             widget: "object"
             fields:
               - { label: "URL", name: "url", widget: "string" }
           - label: "Bloque de links"
-            name: "links-block"
+            name: "linksBlock"
             widget: "object"
             fields:
               - { label: "URL", name: "url", widget: "string" }
@@ -149,7 +149,7 @@ collections:
         widget: "list"
         types:
           - label: "Bloque de texto"
-            name: "text-block"
+            name: "textBlock"
             widget: "object"
             fields:
               - {
@@ -161,27 +161,27 @@ collections:
                   editor_components: [],
                 }
           - label: "Bloque de imagen"
-            name: "image-block"
+            name: "imageBlock"
             widget: "object"
             fields:
               - { label: "Imagen", name: "image", widget: "image" }
           - label: "Bloque de título"
-            name: "title-block"
+            name: "titleBlock"
             widget: "object"
             fields:
               - { label: "Título", name: "title", widget: "string" }
           - label: "Bloque de embed Vimeo"
-            name: "vimeo-block"
+            name: "vimeoBlock"
             widget: "object"
             fields:
               - { label: "URL", name: "url", widget: "string" }
           - label: "Bloque de embed YouTube"
-            name: "youtube-block"
+            name: "youtubeBlock"
             widget: "object"
             fields:
               - { label: "URL", name: "url", widget: "string" }
           - label: "Bloque de links"
-            name: "links-block"
+            name: "linksBlock"
             widget: "object"
             fields:
               - { label: "URL", name: "url", widget: "string" }

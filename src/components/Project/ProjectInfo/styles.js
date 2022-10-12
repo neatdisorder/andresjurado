@@ -1,4 +1,7 @@
 const styles = {
+  projectInfoContainer: {
+    width: { md: "908px", lg: "1200px" }
+  },
   projectNameHeading: {
     fontSize: { base: "23px", md: "30px", lg: "40px" },
     fontFamily: "Roboto, sans-serif",

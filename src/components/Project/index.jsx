@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 import ProjectInfo from "./ProjectInfo";
+import ProjectContent from "./ProjectContent";
 import styles from "./styles";
 
 const Project = ({ projectData }) => {
@@ -14,6 +15,7 @@ const Project = ({ projectData }) => {
         projectSpecs={projectData.specs}
         projectCredits={projectData.credits}
       />
+      <ProjectContent projectContent={projectData.content} />
     </Box>
   );
 };

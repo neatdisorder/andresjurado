@@ -8,7 +8,7 @@ const MenuDesktop = () => {
       <Box>
         <Heading {...styles.heading}>ANDRÉS JURADO</Heading>
       </Box>
-      <Flex>
+      <Flex {...styles.menuLinksContainer}>
         <Heading {...styles.menuLinksHeading}>bio</Heading>
         <Heading {...styles.menuLinksHeading}>&nbsp;/&nbsp;</Heading>
         <Heading {...styles.menuLinksHeading}>

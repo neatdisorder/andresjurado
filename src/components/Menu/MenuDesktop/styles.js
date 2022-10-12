@@ -7,6 +7,10 @@ const styles = {
     fontSize: { md: "47px", lg: "63px" },
     fontWeight: "400",
   },
+  menuLinksContainer: {
+    justifyContent: "space-between",
+    width: { md: "908px", lg: "1200px" }
+  },
   menuLinksHeading: {
     fontSize: { md: "23px", lg: "31px" },
     fontWeight: "400",
