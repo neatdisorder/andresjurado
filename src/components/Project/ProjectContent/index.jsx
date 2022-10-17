@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import TextBlock from "./Blocks/TextBlock";
+import CarouselBlock from "./Blocks/CarouselBlock";
 
 const blocks = {
   textBlock: TextBlock,
+  carouselBlock: CarouselBlock,
 };
 
 const ProjectContent = ({ projectContent }) => {
