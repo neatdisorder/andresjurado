@@ -1,9 +1,12 @@
 const styles = {
-    containerSize: {
-        width: {
-            lg: '1200px'
-        }
-    }
+  textComponent: {
+    width: {
+      lg: "1200px",
+    },
+    fontSize: {
+        base: "12px", md: "16px", lg: "21px"
+    },
+  },
 };
 
 export default styles;

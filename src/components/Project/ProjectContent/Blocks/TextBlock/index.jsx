@@ -6,7 +6,7 @@ import styles from './styles';
 const TextBlock = ({ blockContent }) => {
 
   return (
-    <Text {...styles.containerSize}>
+    <Text {...styles.textComponent}>
         {blockContent.text}
     </Text>
   )
