@@ -111,7 +111,7 @@ collections:
                     widget: "object"
                     fields:
                       - { label: "Imagen", name: "image", widget: "image" }
-                      - { label: "Epígrafe", name: "caption", widget: "string" }
+                      - { label: "Epígrafe", name: "caption", widget: "string", required: false }
           - label: "Bloque de título"
             name: "titleBlock"
             widget: "object"
