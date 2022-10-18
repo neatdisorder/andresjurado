@@ -6,7 +6,7 @@ import styles from "./styles";
 const ProjectInfo = ({ projectName, projectSpecs, projectCredits }) => {
   return (
     <Box {...styles.projectInfoContainer}>
-      <Heading {...styles.projectNameHeading}>{projectName}</Heading>
+      <Heading {...styles.projectNameHeading} as="h1">{projectName}</Heading>
       <Flex {...styles.specsContainer}>
         {projectSpecs.map((spec, key) => (
           <Heading {...styles.projectSpecs} key={key}>

@@ -36,13 +36,13 @@ content:
     carouselList:
       - slide:
           image: img/01_yarokamena_-gerardo_sueche_mambeando_for_yarokamena.png
-          caption: "Test 1"
+          caption: Test 1
       - slide:
           image: img/02_yarokamena_-antenna_parabolica3.png
           caption: ""
       - slide:
           image: img/04_yarokamena_antenna.png
-          caption: "Test 3"
+          caption: Test 3
       - slide:
           image: img/05_yarokamena_-antenna_in_chorrera_amazonas.png
           caption: ""
@@ -56,4 +56,8 @@ content:
   - type: imageBlock
     image: img/03_yarokamena_gerardo_reading_1.9.png
     caption: Gerardo Sueche
+  - type: titleBlock
+    title: Trailer
+  - type: vimeoBlock
+    url: "668704913"
 ---

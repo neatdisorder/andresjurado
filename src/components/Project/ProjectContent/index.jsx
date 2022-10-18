@@ -3,11 +3,13 @@ import PropTypes from "prop-types";
 import TextBlock from "./Blocks/TextBlock";
 import CarouselBlock from "./Blocks/CarouselBlock";
 import ImageBlock from "./Blocks/ImageBlock";
+import TitleBlock from "./Blocks/TitleBlock";
 
 const blocks = {
   textBlock: TextBlock,
   carouselBlock: CarouselBlock,
-  imageBlock: ImageBlock
+  imageBlock: ImageBlock,
+  titleBlock: TitleBlock,
 };
 
 const ProjectContent = ({ projectContent }) => {

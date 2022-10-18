@@ -4,7 +4,6 @@ import styles from "./styles";
 import { Flex, Image, Text } from "@chakra-ui/react";
 
 const ImageBlock = ({ blockContent }) => {
-  console.log(blockContent);
 
   return (
     <Flex {...styles.imageContainer}>

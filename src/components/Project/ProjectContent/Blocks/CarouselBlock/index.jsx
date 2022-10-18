@@ -7,8 +7,6 @@ import PropTypes from "prop-types";
 const EmblaCarousel = ({ blockContent }) => {
   const [emblaRef] = useEmblaCarousel({ align: "start" });
 
-  console.log(blockContent);
-
   return (
     <Box className="embla" ref={emblaRef} {...styles.boxContainer}>
       <Flex className="embla__container">
