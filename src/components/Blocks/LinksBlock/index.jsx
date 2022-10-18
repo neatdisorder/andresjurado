@@ -11,7 +11,7 @@ const LinksBlock = ({ blockContent }) => {
     <Box {...styles.linksContainer}>
       {blockContent.links.map((link, key) => {
         return (
-          <Link href={link.link.url} key={key}>
+          <Link href={link.link.url} key={key} passHref>
             <Text as="a" {...styles.linkText}>
               {link.link.linkText}
             </Text>
