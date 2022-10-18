@@ -1,6 +1,7 @@
 const styles = {
   projectInfoContainer: {
-    width: { md: "908px", lg: "1200px" }
+    width: { md: "908px", lg: "1200px" },
+    marginBottom: {base: "40px", md: "56px", lg: "75px"}
   },
   projectNameHeading: {
     fontSize: { base: "23px", md: "30px", lg: "40px" },

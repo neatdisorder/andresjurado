@@ -1,7 +1,8 @@
 const styles = {
     imageContainer: {
         maxWidth: "1200px",
-        flexDirection: "column"
+        flexDirection: "column",
+        marginBottom: {base: "25px", md: "38px", lg: "50px"}
       },
       captionText: {
         textAlign: "right",

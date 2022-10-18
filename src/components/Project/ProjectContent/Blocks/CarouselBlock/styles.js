@@ -1,6 +1,7 @@
 const styles = {
   boxContainer: {
     overflow: "hidden",
+    marginBottom: {base: "25px", md: "38px", lg: "50px"}
   },
   slideContainer: {
     flex: { base: "0 0 100%", lg: "0 0 1200px" },
