@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import TextBlock from "./Blocks/TextBlock";
-import CarouselBlock from "./Blocks/CarouselBlock";
-import ImageBlock from "./Blocks/ImageBlock";
-import TitleBlock from "./Blocks/TitleBlock";
-import VimeoBlock from "./Blocks/VimeoBlock";
-import LinksBlock from "./Blocks/LinksBlock";
+import TextBlock from "../../Blocks/TextBlock";
+import CarouselBlock from "../../Blocks/CarouselBlock";
+import ImageBlock from "../../Blocks/ImageBlock";
+import TitleBlock from "../../Blocks/TitleBlock";
+import VimeoBlock from "../../Blocks/VimeoBlock";
+import LinksBlock from "../../Blocks/LinksBlock";
 
 const blocks = {
   textBlock: TextBlock,
