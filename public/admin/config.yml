@@ -215,6 +215,11 @@ collections:
   - name: "settings"
     label: "Configuración"
     files:
+      - label: "Contenido general"
+        name: "generalContent"
+        file: "settings/general-content.md"
+        fields:
+          - { label: "Pie de página", name: "pageFooter", widget: "string" }
       - label: "Categorías"
         name: "categories"
         file: "settings/categories.md"

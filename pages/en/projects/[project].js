@@ -1,15 +1,17 @@
 import React from "react";
 import Menu from "../../../src/components/Menu";
 import Project from "../../../src/components/Project";
+import Footer from "../../../src/components/Footer";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const project = ({ projectData }) => {
+const project = ({ projectData, footerText }) => {
   return (
     <>
       <Menu />
       <Project projectData={projectData} />
+      <Footer footerText={footerText} />
     </>
   );
 };
@@ -17,6 +19,8 @@ const project = ({ projectData }) => {
 export default project;
 
 export async function getStaticProps(context) {
+  // Traer la información del proyecto
+
   const projectName = context.params.project;
   const projectDirectory = path.join(process.cwd(), "content/en/projects");
   const projectContent = matter(
@@ -25,8 +29,19 @@ export async function getStaticProps(context) {
 
   const projectData = projectContent.data;
 
+  // Traer la información del footer
+
+  const settingsDirectory = path.join(process.cwd(), "settings");
+  const footerContent = matter(
+    fs.readFileSync(settingsDirectory + "/general-content.md", "utf8")
+  );
+
+  const footerText = footerContent.data.pageFooter;
+
+  // Devolver props
+
   return {
-    props: { projectData },
+    props: { projectData, footerText },
   };
 }
 
