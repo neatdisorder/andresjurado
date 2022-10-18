@@ -6,7 +6,7 @@ import ProjectContent from "./ProjectContent";
 import styles from "./styles";
 
 const Project = ({ projectData }) => {
-  console.log(projectData);
+  // console.log(projectData);
 
   return (
     <Box {...styles.projectContainer}>

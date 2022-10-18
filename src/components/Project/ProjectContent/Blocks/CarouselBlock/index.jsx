@@ -1,38 +1,34 @@
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { Box, Flex, Image } from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import styles from "./styles";
+import PropTypes from "prop-types";
 
-const EmblaCarousel = () => {
-  const [emblaRef] = useEmblaCarousel({align: "start"});
+const EmblaCarousel = ({ blockContent }) => {
+  const [emblaRef] = useEmblaCarousel({ align: "start" });
+
+  console.log(blockContent);
 
   return (
     <Box className="embla" ref={emblaRef} {...styles.boxContainer}>
       <Flex className="embla__container">
-        <Flex className="embla__slide" {...styles.slideContainer}>
-          <Image
-            {...styles.images}
-            src="/img/01_yarokamena_-gerardo_sueche_mambeando_for_yarokamena.png"
-          />
-        </Flex>
-        <Flex className="embla__slide" {...styles.slideContainer}>
-          <Image
-            {...styles.images}
-            src="/img/02_yarokamena_-antenna_parabolica3.png"
-          />
-        </Flex>
-        <Flex className="embla__slide" {...styles.slideContainer}>
-          <Image {...styles.images} src="/img/04_yarokamena_antenna.png" />
-        </Flex>
-        <Flex className="embla__slide" {...styles.slideContainer}>
-          <Image
-            {...styles.images}
-            src="/img/05_yarokamena_-antenna_in_chorrera_amazonas.png"
-          />
-        </Flex>
+        {blockContent.carouselList.map((slide, key) => {
+          return (
+            <Flex className="embla__slide" {...styles.slideContainer} key={key}>
+              <Image src={"/" + slide.slide.image} />
+              {slide.slide.caption && (
+                <Text {...styles.captionContainer}>{slide.slide.caption}</Text>
+              )}
+            </Flex>
+          );
+        })}
       </Flex>
     </Box>
   );
+};
+
+EmblaCarousel.propTypes = {
+  blockContent: PropTypes.object.isRequired,
 };
 
 export default EmblaCarousel;

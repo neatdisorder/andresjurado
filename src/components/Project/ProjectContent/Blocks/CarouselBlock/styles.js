@@ -4,10 +4,14 @@ const styles = {
   },
   slideContainer: {
     flex: { base: "0 0 100%", lg: "0 0 1200px" },
+    flexDirection: "column"
   },
-  images: {
-    // width: "1200px",
-  },
+  captionContainer: {
+    textAlign: "right",
+    fontFamily: "Roboto, sans-serif",
+    fontSize: {base: "10px", md: "13px", lg: "17px"},
+    fontStyle: "italic"
+  }
 };
 
 export default styles;

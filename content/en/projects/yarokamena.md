@@ -36,13 +36,13 @@ content:
     carouselList:
       - slide:
           image: img/01_yarokamena_-gerardo_sueche_mambeando_for_yarokamena.png
-          caption: ""
+          caption: "Test 1"
       - slide:
           image: img/02_yarokamena_-antenna_parabolica3.png
           caption: ""
       - slide:
           image: img/04_yarokamena_antenna.png
-          caption: ""
+          caption: "Test 3"
       - slide:
           image: img/05_yarokamena_-antenna_in_chorrera_amazonas.png
           caption: ""
