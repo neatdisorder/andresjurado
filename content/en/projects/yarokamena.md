@@ -53,7 +53,7 @@ content:
       ghosts housed in the oral memory of the survivors of this episode of
       exploitation and extractivism; using cinema as a new container for this
       destructive force.
-  #- type: imageBlock
-  #  image: img/03_yarokamena_gerardo_reading_1.9.png
-  #  caption: Gerardo Sueche
+  - type: imageBlock
+    image: img/03_yarokamena_gerardo_reading_1.9.png
+    caption: Gerardo Sueche
 ---
