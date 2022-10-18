@@ -1,4 +1,5 @@
 import Head from "next/head";
+import React from "react";
 import { Component } from "react";
 import { attributes, react as HomeContent } from "../content/home.md";
 import { Heading } from "@chakra-ui/react";
