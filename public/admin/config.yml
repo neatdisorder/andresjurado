@@ -107,8 +107,16 @@ collections:
             name: "linksBlock"
             widget: "object"
             fields:
-              - { label: "URL", name: "url", widget: "string" }
-              - { label: "Texto", name: "link-text", widget: "string" }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                - label: "Link"
+                  name: "link"
+                  widget: "object"
+                  fields:
+                    - { label: "Texto", name: "linkText", widget: "string" }
+                    - { label: "URL", name: "url", widget: "string" }
   - name: "proyectos"
     label: "Proyectos"
     folder: "content/es/proyectos"
@@ -194,8 +202,16 @@ collections:
             name: "linksBlock"
             widget: "object"
             fields:
-              - { label: "URL", name: "url", widget: "string" }
-              - { label: "Texto", name: "link-text", widget: "string" }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                - label: "Link"
+                  name: "link"
+                  widget: "object"
+                  fields:
+                    - { label: "Texto", name: "linkText", widget: "string" }
+                    - { label: "URL", name: "url", widget: "string" }
   - name: "settings"
     label: "Configuración"
     files:

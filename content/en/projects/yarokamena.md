@@ -63,6 +63,8 @@ content:
   - type: titleBlock
     title: Prensa
   - type: linksBlock
-    url: https://www.arsenal-berlin.de/forum-forum-expanded/programm-forum-expanded/filme/yarokamena/
-    link-text: 1. Arsenal Kino
+    links:
+      - link:
+          linkText: 1. Arsenal Kino
+          url: https://www.arsenal-berlin.de/forum-forum-expanded/programm-forum-expanded/filme/yarokamena/
 ---

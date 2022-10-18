@@ -5,6 +5,7 @@ import CarouselBlock from "./Blocks/CarouselBlock";
 import ImageBlock from "./Blocks/ImageBlock";
 import TitleBlock from "./Blocks/TitleBlock";
 import VimeoBlock from "./Blocks/VimeoBlock";
+import LinksBlock from "./Blocks/LinksBlock";
 
 const blocks = {
   textBlock: TextBlock,
@@ -12,6 +13,7 @@ const blocks = {
   imageBlock: ImageBlock,
   titleBlock: TitleBlock,
   vimeoBlock: VimeoBlock,
+  linksBlock: LinksBlock
 };
 
 const ProjectContent = ({ projectContent }) => {
