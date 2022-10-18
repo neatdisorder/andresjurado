@@ -4,12 +4,14 @@ import TextBlock from "./Blocks/TextBlock";
 import CarouselBlock from "./Blocks/CarouselBlock";
 import ImageBlock from "./Blocks/ImageBlock";
 import TitleBlock from "./Blocks/TitleBlock";
+import VimeoBlock from "./Blocks/VimeoBlock";
 
 const blocks = {
   textBlock: TextBlock,
   carouselBlock: CarouselBlock,
   imageBlock: ImageBlock,
   titleBlock: TitleBlock,
+  vimeoBlock: VimeoBlock,
 };
 
 const ProjectContent = ({ projectContent }) => {

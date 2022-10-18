@@ -59,5 +59,10 @@ content:
   - type: titleBlock
     title: Trailer
   - type: vimeoBlock
-    url: "668704913"
+    id: "668704913"
+  - type: titleBlock
+    title: Prensa
+  - type: linksBlock
+    url: https://www.arsenal-berlin.de/forum-forum-expanded/programm-forum-expanded/filme/yarokamena/
+    link-text: 1. Arsenal Kino
 ---

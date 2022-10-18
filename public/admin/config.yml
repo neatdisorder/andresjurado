@@ -22,30 +22,6 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
-  - name: "settings"
-    label: "Configuración"
-    files:
-      - label: "Categorías"
-        name: "categories"
-        file: "settings/categories.md"
-        fields:
-          - label: "Listado de categorías"
-            name: "categories-list"
-            widget: "list"
-            label_singular: "Categoría"
-            fields:
-              - label: "Categoría"
-                name: "category"
-                widget: "object"
-                fields:
-                  - { label: "Título ES", name: "title-es", widget: "string" }
-                  - { label: "Título EN", name: "title-en", widget: "string" }
-                  - {
-                      label: "Color",
-                      name: "color",
-                      widget: "color",
-                      default: "#FFFFFF",
-                    }
   - name: "projects"
     label: "Projects"
     folder: "content/en/projects"
@@ -121,7 +97,7 @@ collections:
             name: "vimeoBlock"
             widget: "object"
             fields:
-              - { label: "URL", name: "url", widget: "string" }
+              - { label: "ID", name: "id", widget: "string" }
           - label: "Bloque de embed YouTube"
             name: "youtubeBlock"
             widget: "object"
@@ -208,7 +184,7 @@ collections:
             name: "vimeoBlock"
             widget: "object"
             fields:
-              - { label: "URL", name: "url", widget: "string" }
+              - { label: "ID", name: "id", widget: "string" }
           - label: "Bloque de embed YouTube"
             name: "youtubeBlock"
             widget: "object"
@@ -220,3 +196,27 @@ collections:
             fields:
               - { label: "URL", name: "url", widget: "string" }
               - { label: "Texto", name: "link-text", widget: "string" }
+  - name: "settings"
+    label: "Configuración"
+    files:
+      - label: "Categorías"
+        name: "categories"
+        file: "settings/categories.md"
+        fields:
+          - label: "Listado de categorías"
+            name: "categories-list"
+            widget: "list"
+            label_singular: "Categoría"
+            fields:
+              - label: "Categoría"
+                name: "category"
+                widget: "object"
+                fields:
+                  - { label: "Título ES", name: "title-es", widget: "string" }
+                  - { label: "Título EN", name: "title-en", widget: "string" }
+                  - {
+                      label: "Color",
+                      name: "color",
+                      widget: "color",
+                      default: "#FFFFFF",
+                    }
