@@ -19,15 +19,28 @@ const project = ({ projectData, footerText }) => {
 export default project;
 
 export async function getStaticProps(context) {
+
+  console.log('//// COMIENZO DE GETSTATICPROPS //////');
+
   // Traer la información del proyecto
 
   const projectName = context.params.project;
+
+  console.log(projectName, "projectName");
+
   const projectDirectory = path.join(process.cwd(), "content/en/projects");
+
+  console.log(projectDirectory, "projectDirectory");
+
   const projectContent = matter(
     fs.readFileSync(projectDirectory + "/" + projectName + ".md", "utf8")
   );
 
+  console.log(projectContent, "projectContent");
+
   const projectData = projectContent.data;
+
+  console.log(projectData, "projectData");
 
   // Traer la información del footer
 
@@ -40,6 +53,8 @@ export async function getStaticProps(context) {
 
   // Devolver props
 
+  console.log('//// FIN DE GETSTATICPROPS //////');
+
   return {
     props: { projectData, footerText },
   };
@@ -48,7 +63,7 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
   return {
     // WIP: Estas rutas tienen que actualizarse con todos los archivos que haya de MD en cada build.
-    paths: ["/en/projects/yarokamena"],
-    fallback: true,
+    paths: [{ params: { project: 'yarokamena' } }],
+    fallback: false,
   };
 }
