@@ -3,14 +3,10 @@ import { Box, Heading, Flex } from "@chakra-ui/react";
 import styles from "./styles";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import PropTypes from "prop-types";
 
-const MenuDesktop = () => {
-
+const MenuDesktop = ({ menuCategories }) => {
   const router = useRouter();
-
-  console.log(router);
-
-  console.log(router.pathname);
 
   return (
     <Box {...styles.menuContainer}>
@@ -18,19 +14,33 @@ const MenuDesktop = () => {
         <Heading {...styles.heading}>ANDRÉS JURADO</Heading>
       </Box>
       <Flex {...styles.menuLinksContainer}>
-        <Heading {...styles.menuLinksHeading}>bio</Heading>
+        <Link href={"/bio"}>
+          <Heading {...styles.menuLinksHeading}>bio</Heading>
+        </Link>
         <Heading {...styles.menuLinksSeparator}>&nbsp;/&nbsp;</Heading>
-        <Heading {...styles.menuLinksHeading}>obras</Heading>
-        <Heading {...styles.menuLinksSeparator}>・</Heading>
-        <Heading {...styles.menuLinksHeading}>performance</Heading>
-        <Heading {...styles.menuLinksSeparator}>・</Heading>
-        <Heading {...styles.menuLinksHeading}>film</Heading>
-        <Heading {...styles.menuLinksSeparator}>・</Heading>
-        <Heading {...styles.menuLinksHeading}>exhibición</Heading>
-        <Heading {...styles.menuLinksSeparator}>・</Heading>
-        <Heading {...styles.menuLinksHeading}>curaduría</Heading>
-        <Heading {...styles.menuLinksSeparator}>・</Heading>
-        <Heading {...styles.menuLinksHeading}>publicación</Heading>
+        <Link href={"/"}>
+          <Heading {...styles.menuLinksHeading}>
+            {router.locale === "en" ? "works" : "obras"}
+          </Heading>
+        </Link>
+        {menuCategories.map((category, key) => {
+          const categoryStyle = { ...styles.menuLinksCategories };
+
+          categoryStyle.color = category.category.color;
+
+          return (
+            <Link
+              href={"/categories/" + category.category.titleEN.toLowerCase()}
+              key={key}
+            >
+              <Heading {...categoryStyle}>
+                {router.locale === "en"
+                  ? category.category.titleEN
+                  : category.category.titleES}
+              </Heading>
+            </Link>
+          );
+        })}
         <Heading {...styles.menuLinksSeparator}>&nbsp;/&nbsp;</Heading>
         <Link href={router.asPath} locale="en">
           <Heading {...styles.menuLinksHeading}>en</Heading>
@@ -42,6 +52,10 @@ const MenuDesktop = () => {
       </Flex>
     </Box>
   );
+};
+
+MenuDesktop.propTypes = {
+  menuCategories: PropTypes.array.isRequired,
 };
 
 export default MenuDesktop;

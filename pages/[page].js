@@ -6,10 +6,10 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const page = ({ pageData, footerText }) => {
+const page = ({ menuData, pageData, footerText }) => {
   return (
     <>
-      <Menu />
+      <Menu menuCategories={menuData.categoriesList} />
       <Page pageData={pageData} />
       <Footer footerText={footerText} />
     </>
@@ -19,7 +19,18 @@ const page = ({ pageData, footerText }) => {
 export default page;
 
 export async function getStaticProps(context) {
-  // Traer la información del proyecto
+
+  // LEER CATEGORIAS DESDE LA CONFIGURACION
+
+  const menuDirectory = path.join(process.cwd(), "settings");
+
+  const menuCategories = matter(
+    fs.readFileSync(menuDirectory + "/categories.md", "utf8")
+  );
+
+  const menuData = menuCategories.data;
+
+  // Traer la información de la página
 
   const pageName = context.params.page;
 
@@ -43,7 +54,7 @@ export async function getStaticProps(context) {
   // Devolver props
 
   return {
-    props: { pageData, footerText },
+    props: { menuData, pageData, footerText },
   };
 }
 

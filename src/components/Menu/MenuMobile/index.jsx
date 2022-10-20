@@ -1,17 +1,20 @@
 import React from "react";
-// import { checkPropTypes } from 'prop-types';
+import Link from "next/link";
 import {
   Heading,
   Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
-  Flex
+  Flex,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import styles from './styles';
+import styles from "./styles";
+import { useRouter } from "next/router";
 
 const MenuMobile = () => {
+  const router = useRouter();
+
   return (
     <>
       <Accordion allowToggle>
@@ -23,9 +26,23 @@ const MenuMobile = () => {
             </Flex>
           </AccordionButton>
           <AccordionPanel {...styles.accordionPanel}>
-            <Heading {...styles.headingMenu}>works</Heading>
-            <Heading {...styles.headingMenu}>bio</Heading>
-            <Heading {...styles.headingMenu}>en・es</Heading>
+            <Link href="/bio">
+              <Heading {...styles.headingMenu}>bio</Heading>
+            </Link>
+            <Link href="/">
+              <Heading {...styles.headingMenu}>
+                {router.locale === "en" ? "works" : "obras"}
+              </Heading>
+            </Link>
+            <Flex>
+              <Link href={router.asPath} locale="en">
+                <Heading {...styles.headingMenu}>en</Heading>
+              </Link>
+              <Heading {...styles.headingMenuSeparator}>・</Heading>
+              <Link href={router.asPath} locale="es">
+                <Heading {...styles.headingMenu}>es</Heading>
+              </Link>
+            </Flex>
           </AccordionPanel>
         </AccordionItem>
       </Accordion>

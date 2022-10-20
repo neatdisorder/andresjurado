@@ -2,18 +2,24 @@ import React from "react";
 import MenuDesktop from "./MenuDesktop";
 import MenuMobile from "./MenuMobile";
 import { Show, Hide } from "@chakra-ui/react";
+import PropTypes from 'prop-types';
 
-const Menu = () => {
+const Menu = ({ menuCategories }) => {
+
   return (
     <>
       <Hide above="md">
-        <MenuMobile />
+        <MenuMobile menuCategories={menuCategories} />
       </Hide>
       <Show above="md">
-        <MenuDesktop />
+        <MenuDesktop menuCategories={menuCategories} />
       </Show>
     </>
   );
+};
+
+Menu.propTypes = {
+  menuCategories: PropTypes.array.isRequired
 };
 
 export default Menu;

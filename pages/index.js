@@ -1,37 +1,34 @@
-// import Head from "next/head";
-// import { Component } from "react";
-// import { attributes, react as HomeContent } from "../content/home.md";
-// import { Heading } from "@chakra-ui/react";
-
-// export default class Home extends Component {
-//   render() {
-//     let { title, cats } = attributes;
-//     return (
-//       <>
-//         <Head>
-//           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-//         </Head>
-//         <article>
-//           <Heading>{title}</Heading>
-//           <HomeContent />
-//           <ul>
-//             {cats.map((cat, k) => (
-//               <li key={k}>
-//                 <h2>{cat.name}</h2>
-//                 <p>{cat.description}</p>
-//               </li>
-//             ))}
-//           </ul>
-//         </article>
-//       </>
-//     );
-//   }
-// }
-
 import React from "react";
+import Menu from "../src/components/Menu";
+import WorksList from "../src/components/WorksList";
+import path from "path";
+import fs from "fs";
+import matter from "gray-matter";
 
-const index = () => {
-  return <div>index</div>;
+const index = ({ menuData }) => {
+
+  return (
+    <>
+      <Menu menuCategories={menuData.categoriesList} />
+      <WorksList />
+    </>
+  );
 };
+
+export async function getStaticProps() {
+  // LEER CATEGORIAS DESDE LA CONFIGURACION
+
+  const menuDirectory = path.join(process.cwd(), "settings");
+
+  const menuCategories = matter(
+    fs.readFileSync(menuDirectory + "/categories.md", "utf8")
+  );
+
+  const menuData = menuCategories.data;
+
+  return {
+    props: { menuData },
+  };
+}
 
 export default index;

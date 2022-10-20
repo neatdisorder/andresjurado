@@ -285,7 +285,7 @@ collections:
         file: "settings/categories.md"
         fields:
           - label: "Listado de categorías"
-            name: "categories-list"
+            name: "categoriesList"
             widget: "list"
             label_singular: "Categoría"
             fields:
@@ -293,8 +293,8 @@ collections:
                 name: "category"
                 widget: "object"
                 fields:
-                  - { label: "Título ES", name: "title-es", widget: "string" }
-                  - { label: "Título EN", name: "title-en", widget: "string" }
+                  - { label: "Título ES", name: "titleES", widget: "string" }
+                  - { label: "Título EN", name: "titleEN", widget: "string" }
                   - {
                       label: "Color",
                       name: "color",

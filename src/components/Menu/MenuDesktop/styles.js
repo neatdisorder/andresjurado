@@ -15,6 +15,22 @@ const styles = {
     fontSize: { md: "23px", lg: "31px" },
     fontWeight: "400",
     cursor: "pointer",
+    textTransform: "lowercase",
+  },
+  menuLinksCategories: {
+    fontSize: { md: "23px", lg: "31px" },
+    fontWeight: "400",
+    cursor: "pointer",
+    textTransform: "lowercase",
+    _before: {
+      content: "'・'",
+      color: "white"
+    },
+    _last: {
+      _after: {
+        content: "''",
+      },
+    },
   },
   menuLinksSeparator: {
     fontSize: { md: "23px", lg: "31px" },

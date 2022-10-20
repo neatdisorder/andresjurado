@@ -6,10 +6,10 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const project = ({ projectData, footerText }) => {
+const project = ({ menuData, projectData, footerText }) => {
   return (
     <>
-      <Menu />
+      <Menu menuCategories={menuData.categoriesList} />
       <Project projectData={projectData} />
       <Footer footerText={footerText} />
     </>
@@ -19,6 +19,17 @@ const project = ({ projectData, footerText }) => {
 export default project;
 
 export async function getStaticProps(context) {
+
+  // LEER CATEGORIAS DESDE LA CONFIGURACION
+
+  const menuDirectory = path.join(process.cwd(), "settings");
+
+  const menuCategories = matter(
+    fs.readFileSync(menuDirectory + "/categories.md", "utf8")
+  );
+
+  const menuData = menuCategories.data;
+
   // Traer la información del proyecto
 
   const projectName = context.params.project;
@@ -43,7 +54,7 @@ export async function getStaticProps(context) {
   // Devolver props
 
   return {
-    props: { projectData, footerText },
+    props: { menuData, projectData, footerText },
   };
 }
 
