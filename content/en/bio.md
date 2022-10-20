@@ -1,0 +1,26 @@
+---
+title: Bio
+content:
+  - type: textBlock
+    text: ANDRÉS JURADO (Colombia) His work explores the intersections between
+      performance, experimental cinema, expanded cinema, propaganda,
+      de-colonization, mosquitoes, aliens, the space race, extraterritoriality,
+      science fiction, and the incidences of these intersections in the
+      construction of contemporary narratives, policies, and delusions.
+  - type: textBlock
+    text: His works have been presented at festivals, exhibitions, and exhibitions
+      such as FIDMarseille, AricaDocs, FICCALI, Docs Buenos Aires. Bogotá
+      International Documentary Show. EMAF. European Media Arts Film Festival,
+      Experimenta Colombia, Artrónica, Austria (Peru), Festival Internacional
+      Cervantino (México), Hexadic 6x6(Grecia), Shams - the Sunflower Beirut /
+      Lebanon Festival, BuSho - Budapest International Videoart Festival, Video
+      Art Festival Riga, Cologne OFF in Cologne Germany, Aurora Picture Show
+      United States of America Houston, Tx, MUCA Roma, among others. He has
+      carried out different curatorial projects throughout his career,
+      participated in different international conferences and meetings,
+      organized by Independent Curators International, by Tilting Axis -
+      Curating The Caribbean, Imagination of the Future Center for Social
+      Studies at the University of Coimbra in Portugal, between others. He is
+      Co-director of La Vulcanizadora, Project Laboratory in Visual Arts, Cinema
+      and Expanded Theater.
+---

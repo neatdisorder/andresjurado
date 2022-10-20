@@ -9,9 +9,14 @@ const styles = {
   },
   menuLinksContainer: {
     justifyContent: "space-between",
-    width: { md: "908px", lg: "1200px" }
+    width: { md: "908px", lg: "1200px" },
   },
   menuLinksHeading: {
+    fontSize: { md: "23px", lg: "31px" },
+    fontWeight: "400",
+    cursor: "pointer",
+  },
+  menuLinksSeparator: {
     fontSize: { md: "23px", lg: "31px" },
     fontWeight: "400",
   },
