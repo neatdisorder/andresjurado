@@ -13,7 +13,7 @@ const EmblaCarousel = ({ blockContent }) => {
         {blockContent.carouselList.map((slide, key) => {
           return (
             <Flex className="embla__slide" {...styles.slideContainer} key={key}>
-              <Image src={"/" + slide.slide.image} />
+              <Image src={slide.slide.image+ "-/format/webp/"} />
               {slide.slide.caption && (
                 <Text {...styles.captionContainer}>{slide.slide.caption}</Text>
               )}

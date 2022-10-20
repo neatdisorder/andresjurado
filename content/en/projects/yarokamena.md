@@ -35,16 +35,16 @@ content:
   - type: carouselBlock
     carouselList:
       - slide:
-          image: img/01_yarokamena_-gerardo_sueche_mambeando_for_yarokamena.png
+          image: https://ucarecdn.com/de7cc191-a95a-4a5c-ad17-c470ac8a59b7/
           caption: Test 1
       - slide:
-          image: img/02_yarokamena_-antenna_parabolica3.png
+          image: https://ucarecdn.com/55b56eb2-0858-49da-987d-40e745232558/
           caption: ""
       - slide:
-          image: img/04_yarokamena_antenna.png
+          image: https://ucarecdn.com/b73c3aea-e4d2-4fb2-8f0c-49643803eee8/
           caption: Test 3
       - slide:
-          image: img/05_yarokamena_-antenna_in_chorrera_amazonas.png
+          image: https://ucarecdn.com/bfc09ba8-3b54-442e-8593-883f42e0494a/
           caption: ""
   - type: textBlock
     text: This story is told by Gerardo Sueche, councilor of the Uitoto peoples,
@@ -54,7 +54,7 @@ content:
       exploitation and extractivism; using cinema as a new container for this
       destructive force.
   - type: imageBlock
-    image: img/03_yarokamena_gerardo_reading_1.9.png
+    image: https://ucarecdn.com/cab6062e-b70f-4b60-80b0-9c133abb4662/
     caption: Gerardo Sueche
   - type: titleBlock
     title: Trailer
