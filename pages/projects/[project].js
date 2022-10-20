@@ -1,7 +1,7 @@
 import React from "react";
-import Menu from "../../../src/components/Menu";
-import Project from "../../../src/components/Project";
-import Footer from "../../../src/components/Footer";
+import Menu from "../../src/components/Menu";
+import Project from "../../src/components/Project";
+import Footer from "../../src/components/Footer";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -23,7 +23,7 @@ export async function getStaticProps(context) {
 
   const projectName = context.params.project;
 
-  const projectDirectory = path.join(process.cwd(), "content/en/projects");
+  const projectDirectory = path.join(process.cwd(), "content/" + context.locale + "/projects");
 
   const projectContent = matter(
     fs.readFileSync(projectDirectory + "/" + projectName + ".md", "utf8")
@@ -50,7 +50,10 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
   return {
     // WIP: Estas rutas tienen que actualizarse con todos los archivos que haya de MD en cada build.
-    paths: [{ params: { project: "yarokamena" } }],
+    paths: [
+      { params: { project: "yarokamena" }, locale: "en" },
+      { params: { project: "yarokamena" }, locale: "es" },
+    ],
     fallback: false,
   };
 }

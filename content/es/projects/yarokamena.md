@@ -10,19 +10,19 @@ specs:
 credits:
   - credit:
       person: Andrés Jurado
-      role: Direction
+      role: Dirección
   - credit:
       person: María Rojas Arias, La Vulcanizadora
-      role: Production
+      role: Producción
   - credit:
       person: Kintop
-      role: Co-production
+      role: Co-producción
   - credit:
       person: Gerardo Sueche Cañube
-      role: Narration
+      role: Narración
   - credit:
       person: Julián Galay
-      role: Sound design
+      role: Diseño sonoro
 content:
   - type: textBlock
     text: This is the story of a Uitoto indigenous person who organized a resistance
@@ -61,7 +61,7 @@ content:
   - type: vimeoBlock
     id: "668704913"
   - type: titleBlock
-    title: Press
+    title: Prensa
   - type: linksBlock
     links:
       - link:
