@@ -34,7 +34,10 @@ export async function getStaticProps(context) {
 
   const projectName = context.params.project;
 
-  const projectDirectory = path.join(process.cwd(), "content/" + context.locale + "/projects");
+  const projectDirectory = path.join(
+    process.cwd(),
+    "content/" + context.locale + "/projects"
+  );
 
   const projectContent = matter(
     fs.readFileSync(projectDirectory + "/" + projectName + ".md", "utf8")
@@ -59,12 +62,30 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
+
+  const projectsDirectory = path.join(process.cwd(), "content");
+
+  const projectsEN = fs.readdirSync(projectsDirectory + "/en/projects");
+
+  const projectsES = fs.readdirSync(projectsDirectory + "/es/projects");
+
+  const projectsENClean = [];
+
+  const projectsESClean = [];
+  
+  projectsEN.forEach(item => projectsENClean.push(item.replace(".md", "")));
+
+  projectsES.forEach(item => projectsESClean.push(item.replace(".md", "")));
+
+  const returnPaths = [];
+  
+  projectsENClean.forEach(item => returnPaths.push({ params: { project: item }, locale: "en" }));
+
+  projectsESClean.forEach(item => returnPaths.push({ params: { project: item }, locale: "es" }));
+
   return {
     // WIP: Estas rutas tienen que actualizarse con todos los archivos que haya de MD en cada build.
-    paths: [
-      { params: { project: "yarokamena" }, locale: "en" },
-      { params: { project: "yarokamena" }, locale: "es" },
-    ],
+    paths: returnPaths,
     fallback: false,
   };
 }

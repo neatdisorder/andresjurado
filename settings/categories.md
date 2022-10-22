@@ -14,7 +14,7 @@ categoriesList:
       titleEN: Exhibition
   - category:
       color: "#94bb14"
-      titleES: Curadoría
+      titleES: Curaduría
       titleEN: Curatorship
   - category:
       color: "#974de2"
