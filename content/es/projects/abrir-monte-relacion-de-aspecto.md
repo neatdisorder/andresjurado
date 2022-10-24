@@ -84,6 +84,31 @@ content:
       intentos de ganar en una historia que se repite en cada memoria. El costo
       humano del desarrollo o la persistencia de una imagen degradada de la
       realidad."
+  - type: textBlock
+    text: Es a través de estos estándares de la imagen que examinamos los restos
+      proyectados de territorios materiales y presentes, Tolima, Norte de
+      Santander, Vichada, Chocó y otros que son parte de una experiencia de
+      múltiples límites, el territorio del filme y el de la pantalla, de su
+      colonización, de sus técnicas, sus vidas y sus formas.
+  - type: textBlock
+    text: Esta exposición presenta una digresión de encuadres romos, animados, con
+      textos recortados, títulos y subtítulos que encajan en el marco de una
+      montaña de memorias que de otra manera quedarían sin registro, sin rastro,
+      sin relación y sin aspecto. Como muchas mínimas revoluciones que se siguen
+      gestando día a día al caminar territorios, medidos, rastreados,
+      controlados y ocupados.
+  - type: textBlock
+    text: Las narraciones que se encuadran son el remanente de un trauma. No están
+      asegurando o relatando los hechos con fidelidad, lealtad o corrección,
+      están abriendo un camino para considerar las acciones del presente o
+      sentir la repetición y el arquetipo del drama que se encuadra en las
+      pantallas. Algo que, de antemano y de un modo material, afecta a todas las
+      imágenes realizadas por medios técnicos o transmitidas por ellos, bien sea
+      en cine, en video, en fotografía o en pintura. En cualquier plano que se
+      ha ocupado de retratar un territorio de acuerdo a este proceso de
+      digitalización general, ha tenido que encarar, consciente o
+      inconscientemente, la Relación de Aspecto. Término técnico que aquí, al
+      menos, se hace manifiesto y a su vez político.
   - type: imageBlock
     image: https://ucarecdn.com/78b9b3e6-dcca-4134-a36f-07e3fb3dc8b5/
     caption: "Fotografía: Laura Imery"
@@ -92,24 +117,38 @@ content:
       **Artistas participantes**
 
       Carolina Rosero
+
       Natalia Pérez
+
       Paula Torrado
+
       Pablo Baresch
+
       Maria Rojas Arias
+
       Manuela Sotomonte
+
       Andrés Jurado
+
       Katherine Romero
+
       Javier Morales
+
       David Ospina
   - type: textBlock
     text: |-
       **Montaje** 
+
       Ricardo Angulo
+
       Ronaldo Jimenez
+
       John Campos
   - type: textBlock
     text: |-
-      **Con el apoyo de** 
-      Fundación Príncipe Claus para la cultura y el Desarrollo 
+      **Con el apoyo de**
+
+      Fundación Príncipe Claus para la cultura y el Desarrollo
+
       Idartes – Beca Red Galería Santa Fe 2020
 ---

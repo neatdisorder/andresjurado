@@ -27,11 +27,14 @@ content:
   - type: textBlock
     text: |-
       ISBN 978-958-49-2084-3
+
       300 copies
   - type: textBlock
     text: |-
-      With the support of \
-      Fundación Príncipe Claus para la cultura y el Desarrollo\
+      **With the support of** 
+
+      Fundación Príncipe Claus para la cultura y el Desarrollo
+
       Idartes – Beca Red Galería Santa Fe 2020
   - type: carouselBlock
     carouselList:

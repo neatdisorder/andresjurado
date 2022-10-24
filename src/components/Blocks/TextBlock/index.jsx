@@ -1,14 +1,17 @@
 import React from 'react';
-import { Text } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 import styles from './styles';
+import { marked } from 'marked';
 
 const TextBlock = ({ blockContent }) => {
 
+  marked.setOptions({
+    sanitize: true
+  });
+
   return (
-    <Text {...styles.textComponent}>
-        {blockContent.text}
-    </Text>
+    <Box {...styles.textComponent} dangerouslySetInnerHTML={{__html: marked.parse(blockContent.text)}} />
   )
 
 }

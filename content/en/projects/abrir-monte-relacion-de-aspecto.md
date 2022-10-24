@@ -1,35 +1,34 @@
 ---
 title: "Abrir monte: Relación de aspecto"
 category:
-  - Curaduría
+  - Curatorship
 specs:
   - "2021"
-  - Exposición
+  - Exhibition
   - Galería Santa Fe
   - Bogotá, Colombia
 credits:
   - credit:
       person: Andrés Jurado & Maria Rojas Arias - La Vulcanizadora
-      role: Concepto, curaduría y producción
+      role: Concept, curatorship and production
   - credit:
       person: Paula Juliana Torrado
-      role: Apoyo a la producción
+      role: Production support
 content:
   - type: textBlock
-    text: Esta exposición está imaginada como una sucesión de planos de una
-      película. Es un filme instalado en el espacio, un montaje de
-      imágenes-tiempo traducidas al contexto de exhibición.
+    text: This exhibition is conceived as a succession of shots from a movie. It is
+      a film settled down in space; a montage of time-images translated into the
+      context of the exhibition.
   - type: textBlock
-    text: "En las escenas creadas por cada artista late un panorama atravesado por
-      memorias, flujos e influjos de fantasmas-astros, caballos-dragones,
-      fábricas-maridos, abuelas-anarquistas, cuerpos-intervalo, cañas-jaula y
-      otras deformaciones de la visión que heredadas desde mitologías familiares
-      de lo rural, del monte y del campo, convocan una superchería política:
-      hogueras, cocinas, bandidos, túneles, bombardeos y revueltas,
-      reconstruidas por los medios de comunicación y transmitidas por las redes
-      sociales e intervenidas por inteligencias artificiales, se montan aquí
-      como planos-secuencia de una misma experiencia cinemática en una
-      encrucijada."
+    text: "In the scenes created by each artist beats a panorama. Crossed by
+      memories, flows, and influences of ghosts-stars, horse-dragons,
+      factory-husbands, grandmother- anarchists, body-intervals, cage-canes, and
+      other visual deformations inherited from family mythologies of the rural,
+      the mountains and the countryside. They summon a political fraud:
+      bonfires, kitchens, bandits, tunnels, bombings, and riots, reconstructed
+      by the media, transmitted by social networks, and intervened by artificial
+      intelligences. Here, they are set up as sequence shots of the same
+      cinematic experience at a crossroads."
   - type: carouselBlock
     carouselList:
       - slide:
@@ -51,65 +50,101 @@ content:
           image: https://ucarecdn.com/3d81748a-1a33-45ce-a645-9719831b4fc9/
           caption: "Fotografía: Laura Imery"
   - type: textBlock
-    text: "I: Siete personas se rebelan en contra de la violencia de estado y
-      realizan una revolución que dura tan solo un día. No hay muchos archivos
-      sobre el evento. Solo un par de fotografías. Una y muchas abuelas
-      anarquistas recuerdan estas historias."
+    text: "I: Seven people rebel against state violence and carry out a revolution
+      that lasts only one day. There are not many files on the event. Just a
+      couple of photos. One and many anarchist grandmothers remember these
+      stories."
   - type: textBlock
-    text: "II: En el campo un hombre que retorna a su casa es asesinado por
-      diferencias ideológicas, su recuerdo acecha como un animal mitológico."
+    text: "II: In the countryside, a man who returns home is murdered due to
+      ideological differences. His memory lurks like a mythological animal."
   - type: textBlock
-    text: "III: Una mujer se casa con una fábrica que termina por develar una
-      relación del desarrollo con la castidad. Las mujeres obreras realizan una
-      huelga, dentro de sus peticiones exigían que se les dejara usar zapatos
-      dentro de la fábrica, que despidieran a los capataces que las acosaban
-      sexualmente, que se disminuyeran las jornadas de más de 12 horas de
-      trabajo y que se les diera una hora de almuerzo."
+    text: "III: A woman marries a factory that ends up revealing a relationship
+      between progress and chastity. The women workers carry out a strike. As
+      part of their requests, they demand that they be allowed to wear shoes
+      inside the factory, that the foremen who sexually harass them be
+      dismissed, that the 12 hour working days be reduced and that they be given
+      one hour for lunch."
   - type: textBlock
-    text: "IV: Una mujer desconfía de la caña de azúcar, no sabe muy bien por qué,
-      pero sabe que este monocultivo es una jaula artificial enorme."
+    text: "IV: A woman distrusts sugar cane. She doesnt really know why, but she
+      knows that this monoculture is a huge artificial cage."
   - type: textBlock
-    text: "V: Un viaje espacial de un sujeto que huye de la guerra, del apartheid
-      global y de la esclavitud termina por ser la proyección de un cuerpo sin
-      vida que viaja por un río de memorias y revoluciones latentes en medio de
-      múltiples asesinatos, aquí se resuelve en la figura de un mito moderno de
-      resistencia al extractivismo en la selva."
+    text: "V: A space trip of a subject fleeing war, global apartheid and slavery
+      ends up being the projection of a lifeless body that travels through a
+      river of memories and latent revolutions in the midst of multiple murders.
+      Here, it is resolved in the figure of a modern myth of resistance to
+      extractivism in the jungle."
   - type: textBlock
-    text: "VI: En la frontera, innumerables cuerpos transitan por un territorio que
-      recuerda el paso de la vida a la muerte, pero este pasaje es tan
-      arbitrario que nos recuerda que la imagen también tiene fronteras."
+    text: "VI: On the border, innumerable bodies pass through a territory that
+      recalls the passage from life to death. But this passage is so arbitrary
+      that it reminds us that the image also has borders."
   - type: textBlock
-    text: "VII: Una sucesión de correspondencias fílmicas sobre el territorio. Bajo
-      el sol se reúnen apenas destellos de un mapa imposible y bizarro de los
-      intentos de ganar en una historia que se repite en cada memoria. El costo
-      humano del desarrollo o la persistencia de una imagen degradada de la
-      realidad."
+    text: "VII: A succession of filmic correspondences on the territory. Under the
+      sun, only glimpses of an impossible and bizarre map of attempts to win
+      gather in a story that repeats itself in each memory. The human cost of
+      development, or the persistence of a degraded image of reality. It is
+      through these image standards that we examine the projected remains of
+      material and present territories of Tolima, Norte de Santander, Vichada,
+      Chocó and others that are part of an experience of multiple limits: the
+      territory of the film and that of the screen, their colonization, their
+      techniques, their lives and their ways."
+  - type: textBlock
+    text: This exhibition presents a digression from blunt, animated frames, with
+      cut-out texts, titles, and subtitles that fit into the framework of a
+      mountain of memories that would otherwise remain unregistered, untraced,
+      unrelated, and without aspect. Just like many minimal revolutions that
+      continue to develop day by day when walking territories that have been
+      measured, tracked, controlled, and occupied.
+  - type: textBlock
+    text: The narratives that are framed are the remnant of a trauma. They are not
+      assuring or reporting the facts with fidelity, loyalty, or correctness.
+      They are opening a way to consider present actions or feel the repetition
+      and the archetype of the drama that is framed on the screens. Something
+      that, in advance and in a material way, affects all images made by
+      technical means or transmitted by them, whether in film, video,
+      photography or painting. Any plane that has been concerned with portraying
+      a territory according to this general digitalisation process has had to
+      face, consciously or unconsciously, the Aspect Ratio. A technical term
+      that here, at least, becomes manifest and, at the same time, political.
   - type: imageBlock
     image: https://ucarecdn.com/78b9b3e6-dcca-4134-a36f-07e3fb3dc8b5/
     caption: "Fotografía: Laura Imery"
   - type: textBlock
     text: |-
-      **Artistas participantes**
+      **Participating artists**
 
       Carolina Rosero
+
       Natalia Pérez
+
       Paula Torrado
+
       Pablo Baresch
+
       Maria Rojas Arias
+
       Manuela Sotomonte
+
       Andrés Jurado
+
       Katherine Romero
+
       Javier Morales
+
       David Ospina
   - type: textBlock
     text: |-
-      **Montaje** 
+      **Staging** 
+
       Ricardo Angulo
+
       Ronaldo Jimenez
+
       John Campos
   - type: textBlock
     text: |-
-      **Con el apoyo de** 
+      **With the support of** 
+
       Fundación Príncipe Claus para la cultura y el Desarrollo 
+
       Idartes – Beca Red Galería Santa Fe 2020
 ---
