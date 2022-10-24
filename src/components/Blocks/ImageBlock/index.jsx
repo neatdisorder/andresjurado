@@ -7,7 +7,7 @@ const ImageBlock = ({ blockContent }) => {
 
   return (
     <Flex {...styles.imageContainer}>
-      <Image src={blockContent.image + "-/format/webp/"} />
+      <Image src={blockContent.image + "-/resize/1800x/-/format/webp/"} />
       {blockContent.caption && (
         <Text {...styles.captionText}>{blockContent.caption}</Text>
       )}

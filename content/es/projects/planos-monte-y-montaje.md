@@ -28,13 +28,6 @@ content:
     text: |-
       ISBN 978-958-49-2084-3
       300 copias
-  - type: textBlock
-    text: |-
-      **Con el apoyo de** 
-
-      Fundación Príncipe Claus para la cultura y el Desarrollo
-
-      Idartes – Beca Red Galería Santa Fe 2020
   - type: carouselBlock
     carouselList:
       - slide:
@@ -43,4 +36,11 @@ content:
           image: https://ucarecdn.com/268cc91e-f5aa-4e5a-b6df-a1e19bc8d5de/
       - slide:
           image: https://ucarecdn.com/120f5f71-95fd-4028-9626-86d7e575344a/
+  - type: textBlock
+    text: |-
+      **Con el apoyo de** 
+
+      Fundación Príncipe Claus para la cultura y el Desarrollo
+
+      Idartes – Beca Red Galería Santa Fe 2020
 ---
