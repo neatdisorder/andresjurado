@@ -59,12 +59,35 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
+
+  const pagesDirectory = path.join(process.cwd(), "content");
+
+  const pagesEN = fs.readdirSync(pagesDirectory + "/en");
+
+  const pagesES = fs.readdirSync(pagesDirectory + "/es");
+
+  const pagesENFilesOnly = pagesEN.filter(item => item.includes('.md'));
+
+  const pagesESFilesOnly = pagesES.filter(item => item.includes('.md'));
+
+  const pagesENClean = [];
+
+  const pagesESClean = [];
+  
+  pagesENFilesOnly.forEach(item => pagesENClean.push(item.replace(".md", "")));
+
+  pagesESFilesOnly.forEach(item => pagesESClean.push(item.replace(".md", "")));
+
+  const returnPaths = [];
+  
+  pagesENClean.forEach(item => returnPaths.push({ params: { page: item }, locale: "en" }));
+
+  pagesESClean.forEach(item => returnPaths.push({ params: { page: item }, locale: "es" }));
+
+  console.log(returnPaths);
+
   return {
-    // WIP: Estas rutas tienen que actualizarse con todos los archivos que haya de MD en cada build.
-    paths: [
-      { params: { page: "bio" }, locale: "en" },
-      { params: { page: "bio" }, locale: "es" },
-    ],
+    paths: returnPaths,
     fallback: false,
   };
 }

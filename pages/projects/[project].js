@@ -84,7 +84,6 @@ export async function getStaticPaths() {
   projectsESClean.forEach(item => returnPaths.push({ params: { project: item }, locale: "es" }));
 
   return {
-    // WIP: Estas rutas tienen que actualizarse con todos los archivos que haya de MD en cada build.
     paths: returnPaths,
     fallback: false,
   };
