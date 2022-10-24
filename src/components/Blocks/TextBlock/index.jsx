@@ -5,11 +5,7 @@ import styles from './styles';
 import { marked } from 'marked';
 
 const TextBlock = ({ blockContent }) => {
-
-  marked.setOptions({
-    sanitize: true
-  });
-
+  
   return (
     <Box {...styles.textComponent} dangerouslySetInnerHTML={{__html: marked.parse(blockContent.text)}} />
   )
