@@ -84,8 +84,6 @@ export async function getStaticPaths() {
 
   pagesESClean.forEach(item => returnPaths.push({ params: { page: item }, locale: "es" }));
 
-  console.log(returnPaths);
-
   return {
     paths: returnPaths,
     fallback: false,
