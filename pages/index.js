@@ -5,11 +5,15 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 
-const index = ({ menuData, menuProjects }) => {
+const index = ({ menuData, menuProjectOrder, projectData }) => {
   return (
     <>
       <Menu menuCategories={menuData.categoriesList} />
-      <WorksList menuProjects={menuProjects} />
+      <WorksList
+        menuCategories={menuData.categoriesList}
+        menuProjectOrder={menuProjectOrder}
+        projectData={projectData}
+      />
     </>
   );
 };
@@ -27,17 +31,42 @@ export async function getStaticProps(context) {
 
   // TRAER LISTADO DE PROYECTOS
 
-  const menuProjectsRaw = matter(
+  const menuProjectOrderRaw = matter(
     fs.readFileSync(settingsDirectory + "/general-content.md", "utf8")
   );
 
-  const menuProjects =
+  const menuProjectOrder =
     context.locale === "en"
-      ? menuProjectsRaw.data.projectOrderEN
-      : menuProjectsRaw.data.projectOrderES;
+      ? menuProjectOrderRaw.data.projectOrderEN
+      : menuProjectOrderRaw.data.projectOrderES;
+
+  // TRAER TODOS LOS PROYECTOS COMPLETOS PARA ORDENARLOS POR CATEGORÍA
+
+  const projectsDirectory = path.join(process.cwd(), "content");
+
+  const projectFiles = fs.readdirSync(
+    projectsDirectory + "/" + context.locale + "/projects"
+  );
+
+  const projectData = {};
+
+  projectFiles.forEach((file) => {
+    const objectData = matter(
+      fs.readFileSync(
+        projectsDirectory + "/" + context.locale + "/projects/" + file,
+        "utf8"
+      )
+    );
+
+    projectData[objectData.data.title] = {
+      title: objectData.data.title,
+      filename: file.replace(".md", ""),
+      category: objectData.data.category,
+    }
+  });
 
   return {
-    props: { menuData, menuProjects },
+    props: { menuData, menuProjectOrder, projectData },
   };
 }
 
