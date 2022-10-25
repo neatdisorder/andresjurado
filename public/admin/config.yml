@@ -352,6 +352,20 @@ collections:
         file: "settings/general-content.md"
         fields:
           - { label: "Pie de página", name: "pageFooter", widget: "string" }
+          - label: "Orden de proyectos EN"
+            name: "projectOrderEN"
+            widget: "relation"
+            collection: "projects"
+            value_field: "title"
+            search_fields: ["title"]
+            multiple: true
+          - label: "Orden de proyectos ES"
+            name: "projectOrderES"
+            widget: "relation"
+            collection: "proyectos"
+            value_field: "title"
+            search_fields: ["title"]
+            multiple: true
       - label: "Categorías"
         name: "categories"
         file: "settings/categories.md"

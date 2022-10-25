@@ -5,29 +5,39 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 
-const index = ({ menuData }) => {
-
+const index = ({ menuData, menuProjects }) => {
   return (
     <>
       <Menu menuCategories={menuData.categoriesList} />
-      <WorksList />
+      <WorksList menuProjects={menuProjects} />
     </>
   );
 };
 
-export async function getStaticProps() {
+export async function getStaticProps(context) {
+  const settingsDirectory = path.join(process.cwd(), "settings");
+
   // LEER CATEGORIAS DESDE LA CONFIGURACION
 
-  const menuDirectory = path.join(process.cwd(), "settings");
-
   const menuCategories = matter(
-    fs.readFileSync(menuDirectory + "/categories.md", "utf8")
+    fs.readFileSync(settingsDirectory + "/categories.md", "utf8")
   );
 
   const menuData = menuCategories.data;
 
+  // TRAER LISTADO DE PROYECTOS
+
+  const menuProjectsRaw = matter(
+    fs.readFileSync(settingsDirectory + "/general-content.md", "utf8")
+  );
+
+  const menuProjects =
+    context.locale === "en"
+      ? menuProjectsRaw.data.projectOrderEN
+      : menuProjectsRaw.data.projectOrderES;
+
   return {
-    props: { menuData },
+    props: { menuData, menuProjects },
   };
 }
 
