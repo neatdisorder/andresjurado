@@ -8,7 +8,7 @@ import matter from "gray-matter";
 const index = ({ menuData, menuProjectOrder, projectData }) => {
   return (
     <>
-      <Menu menuCategories={menuData.categoriesList} />
+      <Menu menuCategories={menuData.categoriesList} isIndex />
       <WorksList
         menuCategories={menuData.categoriesList}
         menuProjectOrder={menuProjectOrder}

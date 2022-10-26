@@ -12,6 +12,7 @@ const styles = {
     _after: {
       content: "' / '",
       color: "white",
+      cursor: "default"
     },
     _last: {
       _after: {

@@ -5,8 +5,13 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 
-const MenuDesktop = ({ menuCategories }) => {
+const MenuDesktop = ({ menuCategories, isIndex }) => {
   const router = useRouter();
+
+  if (isIndex) {
+    styles.heading.fontSize = { md: "68px", lg: "90px" };
+    styles.menuLinksHeading.fontSize = { md: "24px", lg: "32px" };
+  }
 
   return (
     <Box {...styles.menuContainer}>
@@ -56,6 +61,7 @@ const MenuDesktop = ({ menuCategories }) => {
 
 MenuDesktop.propTypes = {
   menuCategories: PropTypes.array.isRequired,
+  isIndex: PropTypes.bool.isRequired,
 };
 
 export default MenuDesktop;
