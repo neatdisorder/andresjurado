@@ -58,11 +58,25 @@ export async function getStaticProps(context) {
       )
     );
 
+    // CONSEGUIR COLOR DE LA CATEGORIA PARA ENVIARLO AL OBJETO
+
+    let categoryColorIndex =
+      context.locale === "en"
+        ? menuData.categoriesList.findIndex(
+            (category) =>
+              category.category.titleEN == objectData.data.category[0]
+          )
+        : menuData.categoriesList.findIndex(
+            (category) =>
+              category.category.titleES == objectData.data.category[0]
+          );
+
     projectData[objectData.data.title] = {
       title: objectData.data.title,
       filename: file.replace(".md", ""),
       category: objectData.data.category,
-    }
+      color: menuData.categoriesList[categoryColorIndex].category.color,
+    };
   });
 
   return {

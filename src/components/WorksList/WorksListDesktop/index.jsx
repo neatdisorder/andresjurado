@@ -1,11 +1,21 @@
 import React from "react";
-import { Heading } from "@chakra-ui/react";
+import { Heading, Box } from "@chakra-ui/react";
 import PropTypes from "prop-types";
+import Link from "next/link";
+import styles from "./styles";
 
 const WorksListDesktop = ({ menuProjects }) => {
-  return menuProjects.map((project, key) => (
-    <Heading key={key}>{project}</Heading>
-  ));
+  return (
+    <Box {...styles.projectsContainer}>
+      {menuProjects.map((project, key) => (
+        <Link href={"/projects/" + project.filename} key={key}>
+          <Heading {...styles.projectsHeading} color={project.color}>
+            {project.title}
+          </Heading>
+        </Link>
+      ))}
+    </Box>
+  );
 };
 
 WorksListDesktop.propTypes = {

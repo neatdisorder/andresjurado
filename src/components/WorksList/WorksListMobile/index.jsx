@@ -14,7 +14,7 @@ const WorksListMobile = ({ menuCategories, menuProjects }) => {
         <Heading {...styles.categoryHeading}>
           {category.category.titleEN}
         </Heading>
-        <Box {...styles.projectsContainer}>
+        <Box>
           {menuProjects.map(
             (project, key) =>
               project.category[0] === category.category.titleEN && (

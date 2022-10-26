@@ -20,7 +20,6 @@ const WorksList = ({ menuCategories, menuProjectOrder, projectData }) => {
       </Hide>
       <Show above="md">
         <WorksListDesktop
-          menuCategories={menuCategories}
           menuProjects={sortedProjects}
         />
       </Show>
