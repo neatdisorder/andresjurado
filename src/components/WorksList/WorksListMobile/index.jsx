@@ -19,7 +19,12 @@ const WorksListMobile = ({ menuCategories, menuProjects }) => {
             (project, key) =>
               project.category[0] === category.category.titleEN && (
                 <Link key={key} href={"/projects/" + project.filename}>
-                  <Heading {...styles.projectHeading} color={category.category.color}>{project.title}</Heading>
+                  <Heading
+                    {...styles.projectHeading}
+                    color={category.category.color}
+                  >
+                    {project.title}
+                  </Heading>
                 </Link>
               )
           )}
@@ -35,7 +40,12 @@ const WorksListMobile = ({ menuCategories, menuProjects }) => {
             (project, key) =>
               project.category[0] === category.category.titleES && (
                 <Link key={key} href={"/projects/" + project.filename}>
-                  <Heading {...styles.projectHeading} color={category.category.color}>{project.title}</Heading>
+                  <Heading
+                    {...styles.projectHeading}
+                    color={category.category.color}
+                  >
+                    {project.title}
+                  </Heading>
                 </Link>
               )
           )}

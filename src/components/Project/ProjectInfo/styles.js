@@ -15,6 +15,7 @@ const styles = {
     fontSize: { base: "12px", md: "17px", lg: "22px" },
     fontWeight: "400",
     textTransform: "uppercase",
+    display: "inline",
     _after: {
       content: "'・'"
     },
@@ -29,6 +30,7 @@ const styles = {
       fontSize: { base: "11px", md: "15px", lg: "20px" },
       fontFamily: "Roboto, sans-serif",
       fontWeight: "bold",
+      display: "inline",
       _after: {
         content: "'・'"
       }
@@ -37,6 +39,7 @@ const styles = {
       fontSize: { base: "11px", md: "15px", lg: "20px" },
       fontFamily: "Roboto, sans-serif",
       fontWeight: "400",
+      display: "inline",
       textTransform: "lowercase"
     },
   },

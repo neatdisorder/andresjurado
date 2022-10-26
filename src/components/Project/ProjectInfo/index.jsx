@@ -7,24 +7,24 @@ const ProjectInfo = ({ projectName, projectSpecs, projectCredits }) => {
   return (
     <Box {...styles.projectInfoContainer}>
       <Heading {...styles.projectNameHeading} as="h1">{projectName}</Heading>
-      <Flex {...styles.specsContainer}>
+      <Box {...styles.specsContainer}>
         {projectSpecs.map((spec, key) => (
           <Heading {...styles.projectSpecs} key={key}>
             {spec}
           </Heading>
         ))}
-      </Flex>
+      </Box>
       <Box>
         <Flex direction="column">
           {projectCredits.map((credit, key) => (
-            <Flex key={key}>
+            <Box key={key}>
               <Heading {...styles.projectCredits.bold}>
                 {credit.credit.person}
               </Heading>
               <Heading {...styles.projectCredits.regular}>
                 {credit.credit.role}
               </Heading>
-            </Flex>
+            </Box>
           ))}
         </Flex>
       </Box>
