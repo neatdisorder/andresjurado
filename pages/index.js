@@ -1,4 +1,5 @@
 import React from "react";
+import HomeVideo from "../src/components/HomeVideo";
 import Menu from "../src/components/Menu";
 import WorksList from "../src/components/WorksList";
 import path from "path";
@@ -8,6 +9,7 @@ import matter from "gray-matter";
 const index = ({ menuData, menuProjectOrder, projectData }) => {
   return (
     <>
+      <HomeVideo src={"https://res.cloudinary.com/dv2a9f43d/video/upload/q_auto:good/v1666804552/loop_bienvenidos_01_vjtwmw.mov"} />
       <Menu menuCategories={menuData.categoriesList} isIndex />
       <WorksList
         menuCategories={menuData.categoriesList}
