@@ -35,7 +35,7 @@ const WorksListMobile = ({ menuCategories, menuProjects }) => {
             (project, key) =>
               project.category[0] === category.category.titleES && (
                 <Link key={key} href={"/projects/" + project.filename}>
-                  <Heading {...styles.projectHeading}>{project.title}</Heading>
+                  <Heading {...styles.projectHeading} color={category.category.color}>{project.title}</Heading>
                 </Link>
               )
           )}
