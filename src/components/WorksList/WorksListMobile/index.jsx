@@ -2,51 +2,47 @@ import React from "react";
 import { Box, Heading } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 import { useRouter } from "next/router";
-// import styles from './styles';
+import styles from "./styles";
+import Link from "next/link";
 
 const WorksListMobile = ({ menuCategories, menuProjects }) => {
   const router = useRouter();
 
-  console.log(menuCategories);
-
-  console.log(menuProjects);
-
-  return menuCategories.map((category, key) => (
-    // <Box key={key}>
-    //   <Heading>
-    //     {router.locale === "en"
-    //       ? item.category.titleEN
-    //       : item.category.titleES}
-    //   </Heading>
-    //   <Box>
-    //     {menuProjects.map(
-    //       (project, key) =>
-    //         project.category[0] === item && (
-    //           <Heading key={key}>{project.title}</Heading>
-    //         )
-    //     )}
-    //   </Box>
-    // </Box>
-
-      router.locale === "en" ? (<Box key={key}>
-        <Heading>
+  return menuCategories.map((category, key) =>
+    router.locale === "en" ? (
+      <Box key={key} {...styles.worksListContainer}>
+        <Heading {...styles.categoryHeading}>
           {category.category.titleEN}
         </Heading>
-        <Box>
-          {menuProjects.map((project, key) => (project.category[0] === category.category.titleEN && <Heading key={key}>{project.title}</Heading>))}
+        <Box {...styles.projectsContainer}>
+          {menuProjects.map(
+            (project, key) =>
+              project.category[0] === category.category.titleEN && (
+                <Link key={key} href={"/projects/" + project.filename}>
+                  <Heading {...styles.projectHeading} color={category.category.color}>{project.title}</Heading>
+                </Link>
+              )
+          )}
         </Box>
-      </Box>) : (<Box key={key}>
-        <Heading>
+      </Box>
+    ) : (
+      <Box key={key} {...styles.worksListContainer}>
+        <Heading {...styles.categoryHeading}>
           {category.category.titleES}
         </Heading>
-        <Box>
-          {menuProjects.map((project, key) => (project.category[0] === category.category.titleES && <Heading key={key}>{project.title}</Heading>))}
+        <Box {...styles.projectsContainer}>
+          {menuProjects.map(
+            (project, key) =>
+              project.category[0] === category.category.titleES && (
+                <Link key={key} href={"/projects/" + project.filename}>
+                  <Heading {...styles.projectHeading}>{project.title}</Heading>
+                </Link>
+              )
+          )}
         </Box>
-      </Box>)
-
-
-
-  ));
+      </Box>
+    )
+  );
 };
 
 WorksListMobile.propTypes = {
