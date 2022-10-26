@@ -36,11 +36,10 @@ const MenuMobile = () => {
             </Link>
             <Flex>
               <Link href={router.asPath} locale="en">
-                <Heading {...styles.headingMenu}>en</Heading>
+                <Heading {...styles.headingMenuLanguage}>en</Heading>
               </Link>
-              <Heading {...styles.headingMenuSeparator}>・</Heading>
               <Link href={router.asPath} locale="es">
-                <Heading {...styles.headingMenu}>es</Heading>
+                <Heading {...styles.headingMenuLanguage}>es</Heading>
               </Link>
             </Flex>
           </AccordionPanel>

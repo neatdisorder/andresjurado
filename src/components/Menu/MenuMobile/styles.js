@@ -29,9 +29,18 @@ const styles = {
     fontWeight: "400",
     cursor: "pointer",
   },
-  headingMenuSeparator: {
+  headingMenuLanguage: {
     fontSize: "22px",
     fontWeight: "400",
+    cursor: "pointer",
+    _after: {
+      content: "'・'",
+    },
+    _last: {
+      _after: {
+        content: "''",
+      },
+    },
   },
 };
 
