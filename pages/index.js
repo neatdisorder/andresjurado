@@ -5,16 +5,52 @@ import WorksList from "../src/components/WorksList";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
+import { useState } from "react";
 
 const index = ({ menuData, menuProjectOrder, projectData }) => {
+
+  console.log(menuData);
+
+  const [filteredProjects, setFilteredProjects] = useState(projectData);
+
+  const menuFilter = (category, color) => {
+    const includedProjects = {};
+
+    if (category !== "") {
+      for (const [key, value] of Object.entries(projectData)) {
+        if (value.category.indexOf(category) >= 0) {
+          includedProjects[key] = value;
+        }
+      }
+
+      Object.keys(includedProjects).map((objectKey) => {
+        includedProjects[objectKey].color = color;
+      });
+
+      console.log(includedProjects);
+
+      setFilteredProjects(includedProjects);
+    } else {
+      setFilteredProjects(projectData);
+    }
+  };
+
   return (
     <>
-      <HomeVideo src={"https://res.cloudinary.com/dv2a9f43d/video/upload/q_auto:good/v1666804552/loop_bienvenidos_01_vjtwmw.mov"} />
-      <Menu menuCategories={menuData.categoriesList} isIndex />
+      <HomeVideo
+        src={
+          "https://res.cloudinary.com/dv2a9f43d/video/upload/q_auto:good/v1666804552/loop_bienvenidos_01_vjtwmw.mov"
+        }
+      />
+      <Menu
+        menuFilter={menuFilter}
+        menuCategories={menuData.categoriesList}
+        isIndex
+      />
       <WorksList
         menuCategories={menuData.categoriesList}
         menuProjectOrder={menuProjectOrder}
-        projectData={projectData}
+        projectData={filteredProjects}
       />
     </>
   );

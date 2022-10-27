@@ -5,10 +5,13 @@ import { Show, Hide } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 
 const WorksList = ({ menuCategories, menuProjectOrder, projectData }) => {
-
   const sortedProjects = [];
 
-  menuProjectOrder.forEach((item) => sortedProjects.push(projectData[item]));
+  menuProjectOrder.forEach((item) => {
+    if (projectData[item]) {
+      sortedProjects.push(projectData[item]);
+    }
+  });
 
   return (
     <>
@@ -19,9 +22,7 @@ const WorksList = ({ menuCategories, menuProjectOrder, projectData }) => {
         />
       </Hide>
       <Show above="md">
-        <WorksListDesktop
-          menuProjects={sortedProjects}
-        />
+        <WorksListDesktop menuProjects={sortedProjects} />
       </Show>
     </>
   );

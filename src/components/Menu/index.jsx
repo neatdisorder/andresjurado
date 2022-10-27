@@ -4,14 +4,14 @@ import MenuMobile from "./MenuMobile";
 import { Show, Hide } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 
-const Menu = ({ menuCategories, isIndex }) => {
+const Menu = ({ menuCategories, isIndex, menuFilter }) => {
   return (
     <>
       <Hide above="md">
         <MenuMobile menuCategories={menuCategories} />
       </Hide>
       <Show above="md">
-        <MenuDesktop menuCategories={menuCategories} isIndex={isIndex} />
+        <MenuDesktop menuCategories={menuCategories} isIndex={isIndex} menuFilter={menuFilter} />
       </Show>
     </>
   );
@@ -20,6 +20,7 @@ const Menu = ({ menuCategories, isIndex }) => {
 Menu.propTypes = {
   menuCategories: PropTypes.array.isRequired,
   isIndex: PropTypes.bool.isRequired,
+  menuFilter: PropTypes.func.isRequired
 };
 
 export default Menu;

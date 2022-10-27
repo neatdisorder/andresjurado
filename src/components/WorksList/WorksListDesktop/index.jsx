@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from "./styles";
 
 const WorksListDesktop = ({ menuProjects }) => {
+
   return (
     <Box {...styles.projectsContainer}>
       {menuProjects.map((project, key) => (

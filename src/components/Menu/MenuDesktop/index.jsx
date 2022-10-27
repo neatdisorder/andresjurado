@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 
-const MenuDesktop = ({ menuCategories, isIndex }) => {
+const MenuDesktop = ({ menuCategories, isIndex, menuFilter }) => {
   const router = useRouter();
 
   if (isIndex) {
@@ -23,27 +23,31 @@ const MenuDesktop = ({ menuCategories, isIndex }) => {
           <Heading {...styles.menuLinksHeading}>bio</Heading>
         </Link>
         <Heading {...styles.menuLinksSeparator}>&nbsp;/&nbsp;</Heading>
-        <Link href={"/"}>
-          <Heading {...styles.menuLinksHeading}>
+          <Heading {...styles.menuLinksHeading} onClick={() => menuFilter("")}>
             {router.locale === "en" ? "works" : "obras"}
           </Heading>
-        </Link>
         {menuCategories.map((category, key) => {
           const categoryStyle = { ...styles.menuLinksCategories };
 
           categoryStyle.color = category.category.color;
 
           return (
-            <Link
-              href={"/categories/" + category.category.titleEN.toLowerCase()}
+            <Heading
+              {...categoryStyle}
+              onClick={() =>
+                menuFilter(
+                  router.locale === "en"
+                    ? category.category.titleEN
+                    : category.category.titleES,
+                    category.category.color
+                )
+              }
               key={key}
             >
-              <Heading {...categoryStyle}>
-                {router.locale === "en"
-                  ? category.category.titleEN
-                  : category.category.titleES}
-              </Heading>
-            </Link>
+              {router.locale === "en"
+                ? category.category.titleEN
+                : category.category.titleES}
+            </Heading>
           );
         })}
         <Heading {...styles.menuLinksSeparator}>&nbsp;/&nbsp;</Heading>
@@ -62,6 +66,7 @@ const MenuDesktop = ({ menuCategories, isIndex }) => {
 MenuDesktop.propTypes = {
   menuCategories: PropTypes.array.isRequired,
   isIndex: PropTypes.bool.isRequired,
+  menuFilter: PropTypes.func.isRequired,
 };
 
 export default MenuDesktop;
