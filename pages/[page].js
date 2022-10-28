@@ -9,7 +9,7 @@ import matter from "gray-matter";
 const page = ({ menuData, pageData, footerText }) => {
   return (
     <>
-      <Menu menuCategories={menuData.categoriesList} />
+      <Menu menuCategories={menuData.categoriesList} isIndex={false} />
       <Page pageData={pageData} />
       <Footer footerText={footerText} />
     </>

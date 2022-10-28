@@ -1,13 +1,37 @@
 import React from "react";
-import HomeVideo from "../src/components/HomeVideo";
-import Menu from "../src/components/Menu";
-import WorksList from "../src/components/WorksList";
+import HomeVideo from "../../src/components/HomeVideo";
+import Menu from "../../src/components/Menu";
+import WorksList from "../../src/components/WorksList";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 
-const index = ({ menuData, menuProjectOrder, projectData }) => {
+const category = ({ menuData, menuProjectOrder, projectData, pageCategory }) => {
   
+  const includedProjects = {};
+
+  for (const [key, value] of Object.entries(projectData)) {
+    if (value.category.indexOf(pageCategory) >= 0) {
+      includedProjects[key] = value;
+    }
+  }
+
+  let currentCategoryColor = "";
+  
+  menuData.categoriesList.forEach(category => {
+
+    if (category.category.titleEN === pageCategory || category.category.titleEN === pageCategory) {
+
+      currentCategoryColor = category.category.color;
+    
+    }
+
+  });
+
+  Object.keys(includedProjects).map((objectKey) => {
+        includedProjects[objectKey].color = currentCategoryColor;
+  });
+
   return (
     <>
       <HomeVideo
@@ -22,7 +46,7 @@ const index = ({ menuData, menuProjectOrder, projectData }) => {
       <WorksList
         menuCategories={menuData.categoriesList}
         menuProjectOrder={menuProjectOrder}
-        projectData={projectData}
+        projectData={includedProjects}
       />
     </>
   );
@@ -89,9 +113,35 @@ export async function getStaticProps(context) {
     };
   });
 
+  const pageCategory = context.params.category;
+
   return {
-    props: { menuData, menuProjectOrder, projectData },
+    props: { menuData, menuProjectOrder, projectData, pageCategory },
   };
 }
 
-export default index;
+export async function getStaticPaths() {
+  const settingsDirectory = path.join(process.cwd(), "settings");
+
+  const menuCategories = matter(
+    fs.readFileSync(settingsDirectory + "/categories.md", "utf8")
+  );
+
+  const menuData = menuCategories.data;
+
+  console.log(menuData);
+
+  const returnPaths = [];
+
+  menuData.categoriesList.forEach(item => returnPaths.push({ params: {category: item.category.titleEN}, locale: "en"}));
+
+  menuData.categoriesList.forEach(item => returnPaths.push({ params: {category: item.category.titleES}, locale: "es"}));
+
+  return {
+    paths: returnPaths,
+    fallback: false,
+  };
+
+}
+
+export default category;

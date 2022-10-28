@@ -5,49 +5,52 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 
-const MenuDesktop = ({ menuCategories, isIndex, menuFilter }) => {
+const MenuDesktop = ({ menuCategories, isIndex }) => {
   const router = useRouter();
 
-  if (isIndex) {
-    styles.heading.fontSize = { md: "68px", lg: "90px" };
-    styles.menuLinksHeading.fontSize = { md: "24px", lg: "32px" };
-  }
+  const headingStyles = isIndex
+    ? { ...styles.headingIndex }
+    : { ...styles.heading };
 
   return (
     <Box {...styles.menuContainer}>
       <Box>
-        <Heading {...styles.heading}>ANDRÉS JURADO</Heading>
+        <Heading {...headingStyles}>ANDRÉS JURADO</Heading>
       </Box>
       <Flex {...styles.menuLinksContainer}>
-        <Link href={"/bio"}>
+        <Link href={"/bio"} passHref>
           <Heading {...styles.menuLinksHeading}>bio</Heading>
         </Link>
         <Heading {...styles.menuLinksSeparator}>&nbsp;/&nbsp;</Heading>
-          <Heading {...styles.menuLinksHeading} onClick={() => menuFilter("")}>
+        <Link href={"/"} passHref>
+          <Heading {...styles.menuLinksHeading}>
             {router.locale === "en" ? "works" : "obras"}
           </Heading>
+        </Link>
         {menuCategories.map((category, key) => {
           const categoryStyle = { ...styles.menuLinksCategories };
 
           categoryStyle.color = category.category.color;
 
           return (
-            <Heading
-              {...categoryStyle}
-              onClick={() =>
-                menuFilter(
-                  router.locale === "en"
-                    ? category.category.titleEN
-                    : category.category.titleES,
-                    category.category.color
-                )
-              }
+            <Link
+              href={{
+                pathname: "/works/[category]",
+                query: {
+                  category:
+                    router.locale === "en"
+                      ? category.category.titleEN
+                      : category.category.titleES,
+                },
+              }}
               key={key}
             >
-              {router.locale === "en"
-                ? category.category.titleEN
-                : category.category.titleES}
-            </Heading>
+              <Heading {...categoryStyle}>
+                {router.locale === "en"
+                  ? category.category.titleEN
+                  : category.category.titleES}
+              </Heading>
+            </Link>
           );
         })}
         <Heading {...styles.menuLinksSeparator}>&nbsp;/&nbsp;</Heading>
@@ -65,8 +68,7 @@ const MenuDesktop = ({ menuCategories, isIndex, menuFilter }) => {
 
 MenuDesktop.propTypes = {
   menuCategories: PropTypes.array.isRequired,
-  isIndex: PropTypes.bool.isRequired,
-  menuFilter: PropTypes.func.isRequired,
+  isIndex: PropTypes.bool.isRequired
 };
 
 export default MenuDesktop;
