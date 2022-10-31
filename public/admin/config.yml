@@ -351,6 +351,8 @@ collections:
         name: "generalContent"
         file: "settings/general-content.md"
         fields:
+          - { label: "Meta description (EN)", name: "metaDescriptionEN", widget: "text" }
+          - { label: "Meta description (ES)", name: "metaDescriptionES", widget: "text" }
           - { label: "Pie de página", name: "pageFooter", widget: "string" }
           - label: "Orden de proyectos EN"
             name: "projectOrderEN"

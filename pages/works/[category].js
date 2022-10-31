@@ -7,12 +7,14 @@ import WorksList from "../../src/components/WorksList";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
+import Head from "next/head";
 
 const category = ({
   menuData,
   menuProjectOrder,
   projectData,
   pageCategory,
+  metaDescription
 }) => {
   const includedProjects = {};
 
@@ -39,6 +41,11 @@ const category = ({
 
   return (
     <>
+      <Head>
+        <title>{pageCategory.toUpperCase()} | ANDRÉS JURADO</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      </Head>
       <Hide above="md">
         <Box>
           <MenuMobile isIndex={true} />
@@ -76,6 +83,14 @@ export async function getStaticProps(context) {
   );
 
   const menuData = menuCategories.data;
+
+  // TRAER META DESCRIPTION
+
+  const metaDescriptionRaw = matter(
+    fs.readFileSync(settingsDirectory + "/general-content.md", "utf8")
+  );
+
+  const metaDescription = context.locale === "en" ? metaDescriptionRaw.data.metaDescriptionEN : metaDescriptionRaw.data.metaDescriptionES;
 
   // TRAER LISTADO DE PROYECTOS
 
@@ -141,7 +156,7 @@ export async function getStaticProps(context) {
   });
 
   return {
-    props: { menuData, menuProjectOrder, projectData, pageCategory },
+    props: { menuData, menuProjectOrder, projectData, pageCategory, metaDescription },
   };
 }
 

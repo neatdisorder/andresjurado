@@ -7,10 +7,16 @@ import { Box, Show, Hide } from "@chakra-ui/react";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
+import Head from "next/head";
 
-const index = ({ menuData, menuProjectOrder, projectData }) => {
+const index = ({ menuData, menuProjectOrder, projectData, metaDescription }) => {
   return (
     <>
+      <Head>
+        <title>ANDRÉS JURADO</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      </Head>
       <Hide above="md">
         <Box>
           <MenuMobile isIndex={true} />
@@ -48,6 +54,14 @@ export async function getStaticProps(context) {
   );
 
   const menuData = menuCategories.data;
+
+  // TRAER META DESCRIPTION
+
+  const metaDescriptionRaw = matter(
+    fs.readFileSync(settingsDirectory + "/general-content.md", "utf8")
+  );
+
+  const metaDescription = context.locale === "en" ? metaDescriptionRaw.data.metaDescriptionEN : metaDescriptionRaw.data.metaDescriptionES;
 
   // TRAER LISTADO DE PROYECTOS
 
@@ -100,7 +114,7 @@ export async function getStaticProps(context) {
   });
 
   return {
-    props: { menuData, menuProjectOrder, projectData },
+    props: { menuData, menuProjectOrder, projectData, metaDescription },
   };
 }
 

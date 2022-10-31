@@ -5,10 +5,25 @@ import Footer from "../../src/components/Footer";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import Head from "next/head";
+import { useRouter } from "next/router";
 
 const project = ({ menuData, projectData, footerText }) => {
+
+  const router = useRouter();
+
+  const metaDescription =
+    router.locale === "en"
+      ? projectData.title + ", a project by Andrés Jurado."
+      : projectData.title + ", un proyecto de Andrés Jurado.";
+
   return (
     <>
+      <Head>
+        <title>{projectData.title.toUpperCase()} | ANDRÉS JURADO</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      </Head>
       <Menu menuCategories={menuData.categoriesList} isIndex={false} />
       <Project projectData={projectData} />
       <Footer footerText={footerText} />
@@ -19,7 +34,6 @@ const project = ({ menuData, projectData, footerText }) => {
 export default project;
 
 export async function getStaticProps(context) {
-
   // LEER CATEGORIAS DESDE LA CONFIGURACION
 
   const menuDirectory = path.join(process.cwd(), "settings");
@@ -62,7 +76,6 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-
   const projectsDirectory = path.join(process.cwd(), "content");
 
   const projectsEN = fs.readdirSync(projectsDirectory + "/en/projects");
@@ -72,16 +85,20 @@ export async function getStaticPaths() {
   const projectsENClean = [];
 
   const projectsESClean = [];
-  
-  projectsEN.forEach(item => projectsENClean.push(item.replace(".md", "")));
 
-  projectsES.forEach(item => projectsESClean.push(item.replace(".md", "")));
+  projectsEN.forEach((item) => projectsENClean.push(item.replace(".md", "")));
+
+  projectsES.forEach((item) => projectsESClean.push(item.replace(".md", "")));
 
   const returnPaths = [];
-  
-  projectsENClean.forEach(item => returnPaths.push({ params: { project: item }, locale: "en" }));
 
-  projectsESClean.forEach(item => returnPaths.push({ params: { project: item }, locale: "es" }));
+  projectsENClean.forEach((item) =>
+    returnPaths.push({ params: { project: item }, locale: "en" })
+  );
+
+  projectsESClean.forEach((item) =>
+    returnPaths.push({ params: { project: item }, locale: "es" })
+  );
 
   return {
     paths: returnPaths,
