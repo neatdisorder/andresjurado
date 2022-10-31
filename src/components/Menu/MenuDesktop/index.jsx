@@ -38,12 +38,11 @@ const MenuDesktop = ({ menuCategories, isIndex }) => {
                 pathname: "/works/[category]",
                 query: {
                   category:
-                    router.locale === "en"
-                      ? category.category.titleEN
-                      : category.category.titleES,
+                    category.category.url
                 },
               }}
               key={key}
+              passHref
             >
               <Heading {...categoryStyle}>
                 {router.locale === "en"
@@ -54,11 +53,11 @@ const MenuDesktop = ({ menuCategories, isIndex }) => {
           );
         })}
         <Heading {...styles.menuLinksSeparator}>&nbsp;/&nbsp;</Heading>
-        <Link href={router.asPath} locale="en">
+        <Link href={router.asPath} locale="en" passHref>
           <Heading {...styles.menuLinksHeading}>en</Heading>
         </Link>
         <Heading {...styles.menuLinksSeparator}>・</Heading>
-        <Link href={router.asPath} locale="es">
+        <Link href={router.asPath} locale="es" passHref>
           <Heading {...styles.menuLinksHeading}>es</Heading>
         </Link>
       </Flex>

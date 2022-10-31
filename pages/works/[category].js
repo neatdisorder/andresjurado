@@ -6,8 +6,12 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 
-const category = ({ menuData, menuProjectOrder, projectData, pageCategory }) => {
-  
+const category = ({
+  menuData,
+  menuProjectOrder,
+  projectData,
+  pageCategory,
+}) => {
   const includedProjects = {};
 
   for (const [key, value] of Object.entries(projectData)) {
@@ -17,19 +21,18 @@ const category = ({ menuData, menuProjectOrder, projectData, pageCategory }) => 
   }
 
   let currentCategoryColor = "";
-  
-  menuData.categoriesList.forEach(category => {
 
-    if (category.category.titleEN === pageCategory || category.category.titleEN === pageCategory) {
-
+  menuData.categoriesList.forEach((category) => {
+    if (
+      category.category.titleEN === pageCategory ||
+      category.category.titleES === pageCategory
+    ) {
       currentCategoryColor = category.category.color;
-    
     }
-
   });
 
   Object.keys(includedProjects).map((objectKey) => {
-        includedProjects[objectKey].color = currentCategoryColor;
+    includedProjects[objectKey].color = currentCategoryColor;
   });
 
   return (
@@ -39,10 +42,7 @@ const category = ({ menuData, menuProjectOrder, projectData, pageCategory }) => 
           "https://res.cloudinary.com/dv2a9f43d/video/upload/q_auto:good/v1666804552/loop_bienvenidos_01_vjtwmw.mov"
         }
       />
-      <Menu
-        menuCategories={menuData.categoriesList}
-        isIndex={true}
-      />
+      <Menu menuCategories={menuData.categoriesList} isIndex={true} />
       <WorksList
         menuCategories={menuData.categoriesList}
         menuProjectOrder={menuProjectOrder}
@@ -113,7 +113,18 @@ export async function getStaticProps(context) {
     };
   });
 
-  const pageCategory = context.params.category;
+  const urlCategory = context.params.category;
+
+  let pageCategory = "";
+
+  menuData.categoriesList.forEach((category) => {
+    if (category.category.url === urlCategory) {
+      pageCategory =
+        context.locale === "en"
+          ? category.category.titleEN
+          : category.category.titleES;
+    }
+  });
 
   return {
     props: { menuData, menuProjectOrder, projectData, pageCategory },
@@ -129,19 +140,20 @@ export async function getStaticPaths() {
 
   const menuData = menuCategories.data;
 
-  console.log(menuData);
-
   const returnPaths = [];
 
-  menuData.categoriesList.forEach(item => returnPaths.push({ params: {category: item.category.titleEN}, locale: "en"}));
+  menuData.categoriesList.forEach((item) =>
+    returnPaths.push({ params: { category: item.category.url }, locale: "en" })
+  );
 
-  menuData.categoriesList.forEach(item => returnPaths.push({ params: {category: item.category.titleES}, locale: "es"}));
+  menuData.categoriesList.forEach((item) =>
+    returnPaths.push({ params: { category: item.category.url }, locale: "es" })
+  );
 
   return {
     paths: returnPaths,
     fallback: false,
   };
-
 }
 
 export default category;
