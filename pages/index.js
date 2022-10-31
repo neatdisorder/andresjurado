@@ -1,24 +1,34 @@
 import React from "react";
 import HomeVideo from "../src/components/HomeVideo";
-import Menu from "../src/components/Menu";
+import MenuMobile from "../src/components/Menu/MenuMobile";
+import MenuDesktop from "../src/components/Menu/MenuDesktop";
 import WorksList from "../src/components/WorksList";
+import { Box, Show, Hide } from "@chakra-ui/react";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 
 const index = ({ menuData, menuProjectOrder, projectData }) => {
-  
   return (
     <>
-      <HomeVideo
-        src={
-          "https://res.cloudinary.com/dv2a9f43d/video/upload/q_auto:good/v1666804552/loop_bienvenidos_01_vjtwmw.mov"
-        }
-      />
-      <Menu
-        menuCategories={menuData.categoriesList}
-        isIndex={true}
-      />
+      <Hide above="md">
+        <Box>
+          <MenuMobile isIndex={true} />
+          <HomeVideo
+            src={
+              "https://res.cloudinary.com/dv2a9f43d/video/upload/q_auto:good/v1666804552/loop_bienvenidos_01_vjtwmw.mov"
+            }
+          />
+        </Box>
+      </Hide>
+      <Show above="md">
+        <HomeVideo
+          src={
+            "https://res.cloudinary.com/dv2a9f43d/video/upload/q_auto:good/v1666804552/loop_bienvenidos_01_vjtwmw.mov"
+          }
+        />
+        <MenuDesktop menuCategories={menuData.categoriesList} isIndex={true} />
+      </Show>
       <WorksList
         menuCategories={menuData.categoriesList}
         menuProjectOrder={menuProjectOrder}

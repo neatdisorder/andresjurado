@@ -6,40 +6,53 @@ import {
   AccordionItem,
   AccordionButton,
   AccordionPanel,
-  Flex,
+  Flex
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import styles from "./styles";
 import { useRouter } from "next/router";
+import PropTypes from 'prop-types';
 
-const MenuMobile = () => {
+const MenuMobile = ({ isIndex }) => {
   const router = useRouter();
+
+  let menuMobileStyles = {...styles};
+
+  if (isIndex) {
+
+    menuMobileStyles.accordionContainer = {
+      position: "absolute",
+      zIndex: 50,
+      width: "100%"
+    };
+
+  }
 
   return (
     <>
-      <Accordion allowToggle>
-        <AccordionItem {...styles.accordionItem}>
-          <AccordionButton {...styles.accordionButton}>
-            <Flex {...styles.accordionButtonContainer}>
-              <Heading {...styles.heading}>ANDRÉS JURADO</Heading>
-              <HamburgerIcon {...styles.hamburgerIcon} />
+      <Accordion {...menuMobileStyles.accordionContainer} allowToggle>
+        <AccordionItem {...menuMobileStyles.accordionItem}>
+          <AccordionButton {...menuMobileStyles.accordionButton}>
+            <Flex {...menuMobileStyles.accordionButtonContainer}>
+              <Heading {...menuMobileStyles.heading}>ANDRÉS JURADO</Heading>
+              <HamburgerIcon {...menuMobileStyles.hamburgerIcon} />
             </Flex>
           </AccordionButton>
-          <AccordionPanel {...styles.accordionPanel}>
+          <AccordionPanel {...menuMobileStyles.accordionPanel}>
             <Link href="/bio">
-              <Heading {...styles.headingMenu}>bio</Heading>
+              <Heading {...menuMobileStyles.headingMenu}>bio</Heading>
             </Link>
             <Link href="/">
-              <Heading {...styles.headingMenu}>
+              <Heading {...menuMobileStyles.headingMenu}>
                 {router.locale === "en" ? "works" : "obras"}
               </Heading>
             </Link>
             <Flex>
               <Link href={router.asPath} locale="en">
-                <Heading {...styles.headingMenuLanguage}>en</Heading>
+                <Heading {...menuMobileStyles.headingMenuLanguage}>en</Heading>
               </Link>
               <Link href={router.asPath} locale="es">
-                <Heading {...styles.headingMenuLanguage}>es</Heading>
+                <Heading {...menuMobileStyles.headingMenuLanguage}>es</Heading>
               </Link>
             </Flex>
           </AccordionPanel>
@@ -47,6 +60,10 @@ const MenuMobile = () => {
       </Accordion>
     </>
   );
+};
+
+MenuMobile.propTypes = {
+  isIndex: PropTypes.bool.isRequired
 };
 
 export default MenuMobile;
