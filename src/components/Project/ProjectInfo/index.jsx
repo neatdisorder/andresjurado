@@ -6,7 +6,9 @@ import styles from "./styles";
 const ProjectInfo = ({ projectName, projectSpecs, projectCredits }) => {
   return (
     <Box {...styles.projectInfoContainer}>
-      <Heading {...styles.projectNameHeading} as="h1">{projectName}</Heading>
+      <Heading {...styles.projectNameHeading} as="h1">
+        {projectName}
+      </Heading>
       <Box {...styles.specsContainer}>
         {projectSpecs.map((spec, key) => (
           <Heading {...styles.projectSpecs} key={key}>
@@ -14,20 +16,18 @@ const ProjectInfo = ({ projectName, projectSpecs, projectCredits }) => {
           </Heading>
         ))}
       </Box>
-      <Box>
-        <Flex direction="column">
-          {projectCredits.map((credit, key) => (
-            <Box key={key}>
-              <Heading {...styles.projectCredits.bold}>
-                {credit.credit.person}
-              </Heading>
-              <Heading {...styles.projectCredits.regular}>
-                {credit.credit.role}
-              </Heading>
-            </Box>
-          ))}
-        </Flex>
-      </Box>
+      <Flex direction="column">
+        {projectCredits.map((credit, key) => (
+          <Flex key={key}>
+            <Heading {...styles.projectCredits.bold}>
+              {credit.credit.person}
+            </Heading>
+            <Heading {...styles.projectCredits.regular}>
+              {credit.credit.role}
+            </Heading>
+          </Flex>
+        ))}
+      </Flex>
     </Box>
   );
 };
