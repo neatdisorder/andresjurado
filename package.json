@@ -32,6 +32,7 @@
     "@fontsource/roboto": "^4.5.8",
     "@fontsource/spectral": "^4.5.11",
     "@u-wave/react-vimeo": "^0.9.9",
+    "embla-carousel-autoplay": "^7.0.4",
     "embla-carousel-react": "^7.0.3",
     "framer-motion": "^6.5.1",
     "gray-matter": "^4.0.3",

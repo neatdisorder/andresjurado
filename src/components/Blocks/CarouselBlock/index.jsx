@@ -1,13 +1,19 @@
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import styles from "./styles";
 import PropTypes from "prop-types";
 
 const EmblaCarousel = ({ blockContent }) => {
-  const [emblaRef] = useEmblaCarousel({
-    align: "start",
-  });
+  const autoplay = Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true });
+
+  const [emblaRef] = useEmblaCarousel(
+    {
+      align: "start",
+    },
+    [autoplay]
+  );
 
   return (
     <Box className="embla" ref={emblaRef} {...styles.boxContainer}>
