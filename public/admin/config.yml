@@ -230,11 +230,6 @@ collections:
             widget: "object"
             fields:
               - { label: "ID", name: "id", widget: "string" }
-          - label: "Bloque de embed YouTube"
-            name: "youtubeBlock"
-            widget: "object"
-            fields:
-              - { label: "URL", name: "url", widget: "string" }
           - label: "Bloque de links"
             name: "linksBlock"
             widget: "object"
@@ -325,11 +320,6 @@ collections:
             widget: "object"
             fields:
               - { label: "ID", name: "id", widget: "string" }
-          - label: "Bloque de embed YouTube"
-            name: "youtubeBlock"
-            widget: "object"
-            fields:
-              - { label: "URL", name: "url", widget: "string" }
           - label: "Bloque de links"
             name: "linksBlock"
             widget: "object"
@@ -353,6 +343,7 @@ collections:
         fields:
           - { label: "Meta description (EN)", name: "metaDescriptionEN", widget: "text" }
           - { label: "Meta description (ES)", name: "metaDescriptionES", widget: "text" }
+          - { label: "Video de portada", name: "coverVideo", widget: "string" }
           - { label: "Pie de página", name: "pageFooter", widget: "string" }
           - label: "Orden de proyectos EN"
             name: "projectOrderEN"

@@ -9,7 +9,13 @@ import fs from "fs";
 import matter from "gray-matter";
 import Head from "next/head";
 
-const index = ({ menuData, menuProjectOrder, projectData, metaDescription }) => {
+const index = ({
+  menuData,
+  menuProjectOrder,
+  projectData,
+  metaDescription,
+  homeVideo,
+}) => {
   return (
     <>
       <Head>
@@ -21,17 +27,13 @@ const index = ({ menuData, menuProjectOrder, projectData, metaDescription }) => 
         <Box>
           <MenuMobile isIndex={true} />
           <HomeVideo
-            src={
-              "https://res.cloudinary.com/dv2a9f43d/video/upload/q_auto:good/v1666804552/loop_bienvenidos_01_vjtwmw.mov"
-            }
+            src={homeVideo}
           />
         </Box>
       </Hide>
       <Show above="md">
         <HomeVideo
-          src={
-            "https://res.cloudinary.com/dv2a9f43d/video/upload/q_auto:good/v1666804552/loop_bienvenidos_01_vjtwmw.mov"
-          }
+          src={homeVideo}
         />
         <MenuDesktop menuCategories={menuData.categoriesList} isIndex={true} />
       </Show>
@@ -61,7 +63,14 @@ export async function getStaticProps(context) {
     fs.readFileSync(settingsDirectory + "/general-content.md", "utf8")
   );
 
-  const metaDescription = context.locale === "en" ? metaDescriptionRaw.data.metaDescriptionEN : metaDescriptionRaw.data.metaDescriptionES;
+  const metaDescription =
+    context.locale === "en"
+      ? metaDescriptionRaw.data.metaDescriptionEN
+      : metaDescriptionRaw.data.metaDescriptionES;
+
+  // TRAER VIDEO DE PORTADA
+
+  const homeVideo = metaDescriptionRaw.data.coverVideo;
 
   // TRAER LISTADO DE PROYECTOS
 
@@ -114,7 +123,13 @@ export async function getStaticProps(context) {
   });
 
   return {
-    props: { menuData, menuProjectOrder, projectData, metaDescription },
+    props: {
+      menuData,
+      menuProjectOrder,
+      projectData,
+      metaDescription,
+      homeVideo,
+    },
   };
 }
 
