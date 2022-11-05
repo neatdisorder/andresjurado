@@ -18,12 +18,14 @@ const category = ({
 }) => {
   const includedProjects = {};
 
+
   for (const [key, value] of Object.entries(projectData)) {
     if (value.category.indexOf(pageCategory) >= 0) {
       includedProjects[key] = value;
     }
   }
 
+  
   let currentCategoryColor = "";
 
   menuData.categoriesList.forEach((category) => {
@@ -38,7 +40,7 @@ const category = ({
   Object.keys(includedProjects).map((objectKey) => {
     includedProjects[objectKey].color = currentCategoryColor;
   });
-
+  
   return (
     <>
       <Head>
@@ -67,7 +69,7 @@ const category = ({
       <WorksList
         menuCategories={menuData.categoriesList}
         menuProjectOrder={menuProjectOrder}
-        projectData={projectData}
+        projectData={includedProjects}
       />
     </>
   );
