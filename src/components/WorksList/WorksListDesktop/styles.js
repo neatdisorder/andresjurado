@@ -2,6 +2,7 @@ const styles = {
   projectsContainer: {
     px: { md: "58px", lg: "77px" },
     flexWrap: "wrap",
+    minHeight: "50vh"
   },
   projectsHeading: {
     display: "inline",
