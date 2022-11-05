@@ -6,10 +6,12 @@ const styles = {
   heading: {
     fontSize: { md: "47px", lg: "63px" },
     fontWeight: "400",
+    cursor: "pointer"
   },
   headingIndex: {
     fontSize: { md: "68px", lg: "90px" },
     fontWeight: "400",
+    cursor: "pointer"
   },
   menuLinksContainer: {
     justifyContent: "space-between",
@@ -20,6 +22,11 @@ const styles = {
     fontWeight: "400",
     cursor: "pointer",
     textTransform: "lowercase",
+    _hover: {
+      textDecoration: "underline",
+      textDecorationThickness: "2px",
+      textUnderlineOffset: "5px"
+    }
   },
   menuLinksHeadingIndex: {
     fontSize: { md: "24px", lg: "32px" },
@@ -30,17 +37,24 @@ const styles = {
   menuLinksCategories: {
     fontSize: { md: "23px", lg: "31px" },
     fontWeight: "400",
-    cursor: "pointer",
     textTransform: "lowercase",
+    cursor: "pointer",
     _before: {
       content: "'・'",
-      color: "white"
+      color: "white",
+      display: "inline-block",
+      cursor: "default"
     },
     _last: {
       _after: {
         content: "''",
       },
     },
+    _hover: {
+      textDecoration: "underline",
+      textDecorationThickness: "2px",
+      textUnderlineOffset: "5px",
+    }
   },
   menuLinksSeparator: {
     fontSize: { md: "23px", lg: "31px" },

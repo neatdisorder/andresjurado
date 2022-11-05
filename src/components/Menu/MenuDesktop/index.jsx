@@ -15,7 +15,9 @@ const MenuDesktop = ({ menuCategories, isIndex }) => {
   return (
     <Box {...styles.menuContainer}>
       <Box>
-        <Heading {...headingStyles}>ANDRÉS JURADO</Heading>
+        <Link href={"/"} passHref>
+          <Heading {...headingStyles}>ANDRÉS JURADO</Heading>
+        </Link>
       </Box>
       <Flex {...styles.menuLinksContainer}>
         <Link href={"/bio"} passHref>
