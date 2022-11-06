@@ -55,7 +55,7 @@ content:
       destructive force.
   - type: imageBlock
     image: https://ucarecdn.com/cab6062e-b70f-4b60-80b0-9c133abb4662/
-    caption: Gerardo Sueche
+    caption: ""
   - type: titleBlock
     title: Teaser
   - type: vimeoBlock
