@@ -18,7 +18,7 @@ const ProjectInfo = ({ projectName, projectSpecs, projectCredits }) => {
       </Box>
       <Flex direction="column">
         {projectCredits.map((credit, key) => (
-          <Flex key={key}>
+          <Flex {...styles.creditContainer} key={key}>
             <Heading {...styles.projectCredits.bold}>
               {credit.credit.person}
             </Heading>

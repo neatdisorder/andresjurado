@@ -25,6 +25,9 @@ const styles = {
       },
     },
   },
+  creditContainer: {
+    flexWrap: "wrap",
+  },
   projectCredits: {
     bold: {
       fontSize: { base: "11px", md: "15px", lg: "20px" },
