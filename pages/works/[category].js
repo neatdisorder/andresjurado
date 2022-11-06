@@ -44,7 +44,7 @@ const category = ({
   return (
     <>
       <Head>
-        <title>{pageCategory.toUpperCase()} | ANDRÉS JURADO</title>
+        <title>{`${pageCategory.toUpperCase()} | ANDRÉS JURADO`}</title>
         <meta name="description" content={metaDescription} />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>

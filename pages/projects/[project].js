@@ -20,7 +20,7 @@ const project = ({ menuData, projectData, footerText }) => {
   return (
     <>
       <Head>
-        <title>{projectData.title.toUpperCase()} | ANDRÉS JURADO</title>
+        <title>{`${projectData.title.toUpperCase()} | ANDRÉS JURADO`}</title>
         <meta name="description" content={metaDescription} />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
