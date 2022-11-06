@@ -36,13 +36,13 @@ content:
     carouselList:
       - slide:
           image: https://ucarecdn.com/de7cc191-a95a-4a5c-ad17-c470ac8a59b7/
-          caption: Test 1
+          caption: ""
       - slide:
           image: https://ucarecdn.com/55b56eb2-0858-49da-987d-40e745232558/
           caption: ""
       - slide:
           image: https://ucarecdn.com/b73c3aea-e4d2-4fb2-8f0c-49643803eee8/
-          caption: Test 3
+          caption: ""
       - slide:
           image: https://ucarecdn.com/bfc09ba8-3b54-442e-8593-883f42e0494a/
           caption: ""
