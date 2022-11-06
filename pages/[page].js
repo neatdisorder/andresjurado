@@ -8,10 +8,11 @@ import path from "path";
 import matter from "gray-matter";
 
 const page = ({ menuData, pageData, footerText, metaDescription }) => {
+
   return (
     <>
       <Head>
-        <title>{pageData.title.toUpperCase()} | ANDRÉS JURADO</title>
+        <title>{`${pageData.title.toUpperCase()} | ANDRÉS JURADO`}</title>
         <meta name="description" content={metaDescription} />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
