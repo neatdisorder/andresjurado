@@ -1,7 +1,7 @@
 const styles = {
   projectInfoContainer: {
     width: { md: "908px", lg: "1200px" },
-    marginBottom: {base: "40px", md: "56px", lg: "75px"}
+    marginBottom: { base: "40px", md: "56px", lg: "75px" },
   },
   projectNameHeading: {
     fontSize: { base: "23px", md: "30px", lg: "40px" },
@@ -17,13 +17,13 @@ const styles = {
     textTransform: "uppercase",
     display: "inline",
     _after: {
-      content: "'・'"
+      content: "'・'",
     },
     _last: {
       _after: {
-        content: "''"
-      }
-    }
+        content: "''",
+      },
+    },
   },
   projectCredits: {
     bold: {
@@ -32,15 +32,15 @@ const styles = {
       fontWeight: "bold",
       display: "inline",
       _after: {
-        content: "'・'"
-      }
+        content: "'・'",
+      },
     },
     regular: {
       fontSize: { base: "11px", md: "15px", lg: "20px" },
       fontFamily: "Roboto, sans-serif",
       fontWeight: "400",
       display: "inline",
-      textTransform: "lowercase"
+      textTransform: "lowercase",
     },
   },
 };

@@ -25,7 +25,8 @@ credits:
       role: Sound design
 content:
   - type: textBlock
-    text: This is the story of a Uitoto indigenous person who organized a resistance
+    text:
+      This is the story of a Uitoto indigenous person who organized a resistance
       to rubber exploitation at the beginning of the 20th century in Casa Arana.
       Yarokamena, invokes the spiritual and cosmic forces of war, releasing its
       destructive power from its container that ends up creating a spiral of

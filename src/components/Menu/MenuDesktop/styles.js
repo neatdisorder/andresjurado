@@ -6,12 +6,12 @@ const styles = {
   heading: {
     fontSize: { md: "47px", lg: "63px" },
     fontWeight: "400",
-    cursor: "pointer"
+    cursor: "pointer",
   },
   headingIndex: {
     fontSize: { md: "68px", lg: "90px" },
     fontWeight: "400",
-    cursor: "pointer"
+    cursor: "pointer",
   },
   menuLinksContainer: {
     justifyContent: "space-between",
@@ -25,8 +25,8 @@ const styles = {
     _hover: {
       textDecoration: "underline",
       textDecorationThickness: "2px",
-      textUnderlineOffset: "5px"
-    }
+      textUnderlineOffset: "5px",
+    },
   },
   menuLinksHeadingIndex: {
     fontSize: { md: "24px", lg: "32px" },
@@ -43,7 +43,7 @@ const styles = {
       content: "'・'",
       color: "white",
       display: "inline-block",
-      cursor: "default"
+      cursor: "default",
     },
     _last: {
       _after: {
@@ -54,7 +54,7 @@ const styles = {
       textDecoration: "underline",
       textDecorationThickness: "2px",
       textUnderlineOffset: "5px",
-    }
+    },
   },
   menuLinksSeparator: {
     fontSize: { md: "23px", lg: "31px" },

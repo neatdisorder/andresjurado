@@ -22,7 +22,8 @@ content:
   - type: imageBlock
     image: https://ucarecdn.com/a85d2b9d-f22b-4a77-86f3-239c9f619bc6/
   - type: textBlock
-    text: "This is how it begins: inside a box, a travel camera, a super 8 camera,
+    text:
+      "This is how it begins: inside a box, a travel camera, a super 8 camera,
       an audio recorder, and a letter. This box travels by mail for an entire
       year to different parts of the country—Tolima, Norte de Santander, Chocó,
       Vichada, Antioquia, Cundinamarca—, to places where the artists who are

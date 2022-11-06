@@ -39,8 +39,7 @@ const MenuDesktop = ({ menuCategories, isIndex }) => {
               href={{
                 pathname: "/works/[category]",
                 query: {
-                  category:
-                    category.category.url
+                  category: category.category.url,
                 },
               }}
               key={key}
@@ -69,7 +68,7 @@ const MenuDesktop = ({ menuCategories, isIndex }) => {
 
 MenuDesktop.propTypes = {
   menuCategories: PropTypes.array.isRequired,
-  isIndex: PropTypes.bool.isRequired
+  isIndex: PropTypes.bool.isRequired,
 };
 
 export default MenuDesktop;

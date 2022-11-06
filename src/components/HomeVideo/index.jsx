@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { AspectRatio, Box } from "@chakra-ui/react";
-import styles from './styles';
+import styles from "./styles";
 
 const HomeVideo = ({ src }) => {
   return (

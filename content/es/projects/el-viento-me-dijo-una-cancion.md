@@ -27,7 +27,8 @@ content:
   - type: imageBlock
     image: https://ucarecdn.com/3bfb3df2-4446-4adb-ba12-62918ef91fbd/
   - type: textBlock
-    text: Adaptación en vivo de La Habanera, de Douglas Sirk. En este encuentro, el
+    text:
+      Adaptación en vivo de La Habanera, de Douglas Sirk. En este encuentro, el
       artista propone un visionado de la película y una conversación con  Adrián
       Alemán, Dailo Barco y Alba González para descubrir los secretos de La
       Habanera. Acción parte de la residencia 'Área 60' en colaboración con la

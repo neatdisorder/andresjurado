@@ -8,15 +8,15 @@ const styles = {
     flexDirection: "column",
     marginRight: { base: "0", lg: "35px" },
     _last: {
-      marginRight: 0
-    }
+      marginRight: 0,
+    },
   },
   captionContainer: {
     textAlign: "right",
     fontFamily: "Roboto, sans-serif",
     fontSize: { base: "10px", md: "13px", lg: "17px" },
     fontStyle: "italic",
-    marginTop: "0.5em"
+    marginTop: "0.5em",
   },
 };
 

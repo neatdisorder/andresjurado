@@ -22,7 +22,8 @@ content:
   - type: imageBlock
     image: https://ucarecdn.com/a85d2b9d-f22b-4a77-86f3-239c9f619bc6/
   - type: textBlock
-    text: "Así comienza: en una caja hay una cámara de viaje, una cámara súper 8mm,
+    text:
+      "Así comienza: en una caja hay una cámara de viaje, una cámara súper 8mm,
       una grabadora de audio y una carta. Esta caja viaja durante un año por
       correo postal a diferentes partes del país — Tolima, Norte de Santander,
       Chocó, Vichada, Antioquia, Cundinamarca—, a lugares en donde se encuentran

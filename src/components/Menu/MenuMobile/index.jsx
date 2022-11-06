@@ -6,26 +6,24 @@ import {
   AccordionItem,
   AccordionButton,
   AccordionPanel,
-  Flex
+  Flex,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import styles from "./styles";
 import { useRouter } from "next/router";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const MenuMobile = ({ isIndex }) => {
   const router = useRouter();
 
-  let menuMobileStyles = {...styles};
+  let menuMobileStyles = { ...styles };
 
   if (isIndex) {
-
     menuMobileStyles.accordionContainer = {
       position: "absolute",
       zIndex: 50,
-      width: "100%"
+      width: "100%",
     };
-
   }
 
   return (
@@ -63,7 +61,7 @@ const MenuMobile = ({ isIndex }) => {
 };
 
 MenuMobile.propTypes = {
-  isIndex: PropTypes.bool.isRequired
+  isIndex: PropTypes.bool.isRequired,
 };
 
 export default MenuMobile;

@@ -11,13 +11,13 @@ const theme = extendTheme({
   },
   fonts: {
     heading: "Mingzat, sans-serif",
-    body: "Spectral, serif"
+    body: "Spectral, serif",
   },
   breakpoints: {
     sm: "320px",
     md: "1024px",
-    lg: "1440px"
-  }
+    lg: "1440px",
+  },
 });
 
 export default theme;

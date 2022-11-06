@@ -8,7 +8,6 @@ import path from "path";
 import matter from "gray-matter";
 
 const page = ({ menuData, pageData, footerText, metaDescription }) => {
-
   return (
     <>
       <Head>
@@ -42,7 +41,10 @@ export async function getStaticProps(context) {
     fs.readFileSync(settingsDirectory + "/general-content.md", "utf8")
   );
 
-  const metaDescription = context.locale === "en" ? metaDescriptionRaw.data.metaDescriptionEN : metaDescriptionRaw.data.metaDescriptionES;
+  const metaDescription =
+    context.locale === "en"
+      ? metaDescriptionRaw.data.metaDescriptionEN
+      : metaDescriptionRaw.data.metaDescriptionES;
 
   // Traer la información de la página
 

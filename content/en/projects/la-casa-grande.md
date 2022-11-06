@@ -26,7 +26,8 @@ content:
       contemporary to the "liberation and circulation" of the first photographic
       image of our common home: the planet Earth.'
   - type: textBlock
-    text: This image was accompanied by many controversies and revolts that occurred
+    text:
+      This image was accompanied by many controversies and revolts that occurred
       parallel to the event; wars and invasions, displacements and migrations,
       continuation of extractive projects and reinstatement of imperial,
       colonial and death policies in rural and urban territories. Wars such as

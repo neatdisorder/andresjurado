@@ -14,10 +14,9 @@ const category = ({
   menuProjectOrder,
   projectData,
   pageCategory,
-  metaDescription
+  metaDescription,
 }) => {
   const includedProjects = {};
-
 
   for (const [key, value] of Object.entries(projectData)) {
     if (value.category.indexOf(pageCategory) >= 0) {
@@ -25,7 +24,6 @@ const category = ({
     }
   }
 
-  
   let currentCategoryColor = "";
 
   menuData.categoriesList.forEach((category) => {
@@ -40,7 +38,7 @@ const category = ({
   Object.keys(includedProjects).map((objectKey) => {
     includedProjects[objectKey].color = currentCategoryColor;
   });
-  
+
   return (
     <>
       <Head>
@@ -92,7 +90,10 @@ export async function getStaticProps(context) {
     fs.readFileSync(settingsDirectory + "/general-content.md", "utf8")
   );
 
-  const metaDescription = context.locale === "en" ? metaDescriptionRaw.data.metaDescriptionEN : metaDescriptionRaw.data.metaDescriptionES;
+  const metaDescription =
+    context.locale === "en"
+      ? metaDescriptionRaw.data.metaDescriptionEN
+      : metaDescriptionRaw.data.metaDescriptionES;
 
   // TRAER LISTADO DE PROYECTOS
 
@@ -158,7 +159,13 @@ export async function getStaticProps(context) {
   });
 
   return {
-    props: { menuData, menuProjectOrder, projectData, pageCategory, metaDescription },
+    props: {
+      menuData,
+      menuProjectOrder,
+      projectData,
+      pageCategory,
+      metaDescription,
+    },
   };
 }
 

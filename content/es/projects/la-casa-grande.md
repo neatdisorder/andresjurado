@@ -20,7 +20,8 @@ credits:
       role: Creación sonora
 content:
   - type: textBlock
-    text: "La casa grande aborda nuestra manera de entender la noción de habitar el
+    text:
+      "La casa grande aborda nuestra manera de entender la noción de habitar el
       planeta Tierra después de la carrera aeroespacial y la llegada del hombre
       a la luna, repasando eventos que ocurrieron en Bogotá y Colombia,
       contemporáneos a la “liberación y circulación” de la primera imagen

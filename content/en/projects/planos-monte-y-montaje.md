@@ -14,7 +14,8 @@ content:
   - type: imageBlock
     image: https://ucarecdn.com/3f6bf1b4-2f28-492c-9832-e7e372626a82/
   - type: textBlock
-    text: This book reflects, through images and experimental texts, on the meaning
+    text:
+      This book reflects, through images and experimental texts, on the meaning
       of the mountain in our context and its veiled histories. The mountain
       emerges here as the extension of a body that, in turn, is the prolongation
       of a war. The contents of Planos, monte y montaje include the presentation

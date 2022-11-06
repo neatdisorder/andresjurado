@@ -14,7 +14,8 @@ content:
   - type: imageBlock
     image: https://ucarecdn.com/3f6bf1b4-2f28-492c-9832-e7e372626a82/
   - type: textBlock
-    text: Este libro reflexiona a través de imágenes y textos experimentales sobre
+    text:
+      Este libro reflexiona a través de imágenes y textos experimentales sobre
       el sentido del monte en nuestro contexto y sus historias veladas. El monte
       emerge aquí la extensión de un cuerpo que, a su vez, es la prolongación de
       una guerra. Entre los contenidos de Planos, monte y montaje se encuentra

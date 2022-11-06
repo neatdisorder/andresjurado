@@ -9,7 +9,6 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const project = ({ menuData, projectData, footerText }) => {
-
   const router = useRouter();
 
   const metaDescription =

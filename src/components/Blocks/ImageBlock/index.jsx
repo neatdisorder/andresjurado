@@ -4,7 +4,6 @@ import styles from "./styles";
 import { Flex, Image, Text } from "@chakra-ui/react";
 
 const ImageBlock = ({ blockContent }) => {
-
   return (
     <Flex {...styles.imageContainer}>
       <Image src={blockContent.image + "-/resize/1800x/-/format/webp/"} />

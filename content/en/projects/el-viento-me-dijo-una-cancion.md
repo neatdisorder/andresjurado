@@ -27,7 +27,8 @@ content:
   - type: imageBlock
     image: https://ucarecdn.com/3bfb3df2-4446-4adb-ba12-62918ef91fbd/
   - type: textBlock
-    text: Live adaptation of Douglas Sirk's La Habanera. In this meeting, the artist
+    text:
+      Live adaptation of Douglas Sirk's La Habanera. In this meeting, the artist
       proposes a viewing of the film and a conversation with Adrián Alemán,
       Dailo Barco and Alba González to discover the secrets of La Habanera. This
       action is part of the residency 'Área 60' in collaboration with the

@@ -8,7 +8,8 @@ content:
       science fiction, and the incidences of these intersections in the
       construction of contemporary narratives, policies, and delusions.
   - type: textBlock
-    text: His works have been presented at festivals, exhibitions, and exhibitions
+    text:
+      His works have been presented at festivals, exhibitions, and exhibitions
       such as FIDMarseille, AricaDocs, FICCALI, Docs Buenos Aires. Bogotá
       International Documentary Show. EMAF. European Media Arts Film Festival,
       Experimenta Colombia, Artrónica, Austria (Peru), Festival Internacional

@@ -20,7 +20,8 @@ content:
       película. Es un filme instalado en el espacio, un montaje de
       imágenes-tiempo traducidas al contexto de exhibición.
   - type: textBlock
-    text: "En las escenas creadas por cada artista late un panorama atravesado por
+    text:
+      "En las escenas creadas por cada artista late un panorama atravesado por
       memorias, flujos e influjos de fantasmas-astros, caballos-dragones,
       fábricas-maridos, abuelas-anarquistas, cuerpos-intervalo, cañas-jaula y
       otras deformaciones de la visión que heredadas desde mitologías familiares
@@ -66,20 +67,24 @@ content:
       sexualmente, que se disminuyeran las jornadas de más de 12 horas de
       trabajo y que se les diera una hora de almuerzo."
   - type: textBlock
-    text: "IV: Una mujer desconfía de la caña de azúcar, no sabe muy bien por qué,
+    text:
+      "IV: Una mujer desconfía de la caña de azúcar, no sabe muy bien por qué,
       pero sabe que este monocultivo es una jaula artificial enorme."
   - type: textBlock
-    text: "V: Un viaje espacial de un sujeto que huye de la guerra, del apartheid
+    text:
+      "V: Un viaje espacial de un sujeto que huye de la guerra, del apartheid
       global y de la esclavitud termina por ser la proyección de un cuerpo sin
       vida que viaja por un río de memorias y revoluciones latentes en medio de
       múltiples asesinatos, aquí se resuelve en la figura de un mito moderno de
       resistencia al extractivismo en la selva."
   - type: textBlock
-    text: "VI: En la frontera, innumerables cuerpos transitan por un territorio que
+    text:
+      "VI: En la frontera, innumerables cuerpos transitan por un territorio que
       recuerda el paso de la vida a la muerte, pero este pasaje es tan
       arbitrario que nos recuerda que la imagen también tiene fronteras."
   - type: textBlock
-    text: "VII: Una sucesión de correspondencias fílmicas sobre el territorio. Bajo
+    text:
+      "VII: Una sucesión de correspondencias fílmicas sobre el territorio. Bajo
       el sol se reúnen apenas destellos de un mapa imposible y bizarro de los
       intentos de ganar en una historia que se repite en cada memoria. El costo
       humano del desarrollo o la persistencia de una imagen degradada de la
@@ -91,14 +96,16 @@ content:
       múltiples límites, el territorio del filme y el de la pantalla, de su
       colonización, de sus técnicas, sus vidas y sus formas.
   - type: textBlock
-    text: Esta exposición presenta una digresión de encuadres romos, animados, con
+    text:
+      Esta exposición presenta una digresión de encuadres romos, animados, con
       textos recortados, títulos y subtítulos que encajan en el marco de una
       montaña de memorias que de otra manera quedarían sin registro, sin rastro,
       sin relación y sin aspecto. Como muchas mínimas revoluciones que se siguen
       gestando día a día al caminar territorios, medidos, rastreados,
       controlados y ocupados.
   - type: textBlock
-    text: Las narraciones que se encuadran son el remanente de un trauma. No están
+    text:
+      Las narraciones que se encuadran son el remanente de un trauma. No están
       asegurando o relatando los hechos con fidelidad, lealtad o corrección,
       están abriendo un camino para considerar las acciones del presente o
       sentir la repetición y el arquetipo del drama que se encuadra en las

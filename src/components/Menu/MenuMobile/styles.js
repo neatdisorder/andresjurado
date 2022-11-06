@@ -15,7 +15,7 @@ const styles = {
   heading: {
     fontSize: "29px",
     fontWeight: "400",
-    textAlign: "left"
+    textAlign: "left",
   },
   hamburgerIcon: {
     boxSize: "29px",

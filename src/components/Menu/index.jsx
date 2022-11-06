@@ -19,7 +19,7 @@ const Menu = ({ menuCategories, isIndex }) => {
 
 Menu.propTypes = {
   menuCategories: PropTypes.array.isRequired,
-  isIndex: PropTypes.bool.isRequired
+  isIndex: PropTypes.bool.isRequired,
 };
 
 export default Menu;

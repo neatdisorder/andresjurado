@@ -21,7 +21,8 @@ content:
   - type: imageBlock
     image: https://ucarecdn.com/d7674b92-b959-4d1a-a07a-edf13cbead2b/
   - type: textBlock
-    text: El Renacer del Carare es un guion de 19 páginas para una presentación de
+    text:
+      El Renacer del Carare es un guion de 19 páginas para una presentación de
       diapositivas (diaporama) realizado alrededor de 1987 por la Asociación de
       Trabajadores Campesinos del Carare (ATCC) y CELA Productions. Su propósito
       fundamental era convertirse en un manifiesto audiovisual que permitiera a

@@ -6,7 +6,11 @@ import styles from "./styles";
 import PropTypes from "prop-types";
 
 const EmblaCarousel = ({ blockContent }) => {
-  const autoplay = Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true });
+  const autoplay = Autoplay({
+    delay: 4000,
+    stopOnInteraction: false,
+    stopOnMouseEnter: true,
+  });
 
   const [emblaRef] = useEmblaCarousel(
     {

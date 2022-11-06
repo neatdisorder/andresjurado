@@ -37,7 +37,12 @@ collections:
             widget: "object"
             fields:
               - { label: "Imagen", name: "image", widget: "image" }
-              - { label: "Epígrafe", name: "caption", widget: "string", required: false }
+              - {
+                  label: "Epígrafe",
+                  name: "caption",
+                  widget: "string",
+                  required: false,
+                }
           - label: "Bloque de carrusel"
             name: "carouselBlock"
             widget: "object"
@@ -52,7 +57,12 @@ collections:
                     widget: "object"
                     fields:
                       - { label: "Imagen", name: "image", widget: "image" }
-                      - { label: "Epígrafe", name: "caption", widget: "string", required: false }
+                      - {
+                          label: "Epígrafe",
+                          name: "caption",
+                          widget: "string",
+                          required: false,
+                        }
           - label: "Bloque de título"
             name: "titleBlock"
             widget: "object"
@@ -76,12 +86,12 @@ collections:
                 name: "links"
                 widget: "list"
                 fields:
-                - label: "Link"
-                  name: "link"
-                  widget: "object"
-                  fields:
-                    - { label: "Texto", name: "linkText", widget: "string" }
-                    - { label: "URL", name: "url", widget: "string" }
+                  - label: "Link"
+                    name: "link"
+                    widget: "object"
+                    fields:
+                      - { label: "Texto", name: "linkText", widget: "string" }
+                      - { label: "URL", name: "url", widget: "string" }
   - name: "paginas"
     label: "[ES] Páginas"
     folder: "content/es"
@@ -109,7 +119,12 @@ collections:
             widget: "object"
             fields:
               - { label: "Imagen", name: "image", widget: "image" }
-              - { label: "Epígrafe", name: "caption", widget: "string", required: false }
+              - {
+                  label: "Epígrafe",
+                  name: "caption",
+                  widget: "string",
+                  required: false,
+                }
           - label: "Bloque de carrusel"
             name: "carouselBlock"
             widget: "object"
@@ -124,7 +139,12 @@ collections:
                     widget: "object"
                     fields:
                       - { label: "Imagen", name: "image", widget: "image" }
-                      - { label: "Epígrafe", name: "caption", widget: "string", required: false }
+                      - {
+                          label: "Epígrafe",
+                          name: "caption",
+                          widget: "string",
+                          required: false,
+                        }
           - label: "Bloque de título"
             name: "titleBlock"
             widget: "object"
@@ -148,12 +168,12 @@ collections:
                 name: "links"
                 widget: "list"
                 fields:
-                - label: "Link"
-                  name: "link"
-                  widget: "object"
-                  fields:
-                    - { label: "Texto", name: "linkText", widget: "string" }
-                    - { label: "URL", name: "url", widget: "string" }
+                  - label: "Link"
+                    name: "link"
+                    widget: "object"
+                    fields:
+                      - { label: "Texto", name: "linkText", widget: "string" }
+                      - { label: "URL", name: "url", widget: "string" }
   - name: "projects"
     label: "[EN] Projects"
     folder: "content/en/projects"
@@ -204,7 +224,12 @@ collections:
             widget: "object"
             fields:
               - { label: "Imagen", name: "image", widget: "image" }
-              - { label: "Epígrafe", name: "caption", widget: "string", required: false }
+              - {
+                  label: "Epígrafe",
+                  name: "caption",
+                  widget: "string",
+                  required: false,
+                }
           - label: "Bloque de carrusel"
             name: "carouselBlock"
             widget: "object"
@@ -219,7 +244,12 @@ collections:
                     widget: "object"
                     fields:
                       - { label: "Imagen", name: "image", widget: "image" }
-                      - { label: "Epígrafe", name: "caption", widget: "string", required: false }
+                      - {
+                          label: "Epígrafe",
+                          name: "caption",
+                          widget: "string",
+                          required: false,
+                        }
           - label: "Bloque de título"
             name: "titleBlock"
             widget: "object"
@@ -238,12 +268,12 @@ collections:
                 name: "links"
                 widget: "list"
                 fields:
-                - label: "Link"
-                  name: "link"
-                  widget: "object"
-                  fields:
-                    - { label: "Texto", name: "linkText", widget: "string" }
-                    - { label: "URL", name: "url", widget: "string" }
+                  - label: "Link"
+                    name: "link"
+                    widget: "object"
+                    fields:
+                      - { label: "Texto", name: "linkText", widget: "string" }
+                      - { label: "URL", name: "url", widget: "string" }
   - name: "proyectos"
     label: "[ES] Proyectos"
     folder: "content/es/projects"
@@ -294,7 +324,12 @@ collections:
             widget: "object"
             fields:
               - { label: "Imagen", name: "image", widget: "image" }
-              - { label: "Epígrafe", name: "caption", widget: "string", required: false }
+              - {
+                  label: "Epígrafe",
+                  name: "caption",
+                  widget: "string",
+                  required: false,
+                }
           - label: "Bloque de carrusel"
             name: "carouselBlock"
             widget: "object"
@@ -309,7 +344,12 @@ collections:
                     widget: "object"
                     fields:
                       - { label: "Imagen", name: "image", widget: "image" }
-                      - { label: "Epígrafe", name: "caption", widget: "string", required: false }
+                      - {
+                          label: "Epígrafe",
+                          name: "caption",
+                          widget: "string",
+                          required: false,
+                        }
           - label: "Bloque de título"
             name: "titleBlock"
             widget: "object"
@@ -328,12 +368,12 @@ collections:
                 name: "links"
                 widget: "list"
                 fields:
-                - label: "Link"
-                  name: "link"
-                  widget: "object"
-                  fields:
-                    - { label: "Texto", name: "linkText", widget: "string" }
-                    - { label: "URL", name: "url", widget: "string" }
+                  - label: "Link"
+                    name: "link"
+                    widget: "object"
+                    fields:
+                      - { label: "Texto", name: "linkText", widget: "string" }
+                      - { label: "URL", name: "url", widget: "string" }
   - name: "settings"
     label: "Configuración"
     files:
@@ -341,8 +381,16 @@ collections:
         name: "generalContent"
         file: "settings/general-content.md"
         fields:
-          - { label: "Meta description (EN)", name: "metaDescriptionEN", widget: "text" }
-          - { label: "Meta description (ES)", name: "metaDescriptionES", widget: "text" }
+          - {
+              label: "Meta description (EN)",
+              name: "metaDescriptionEN",
+              widget: "text",
+            }
+          - {
+              label: "Meta description (ES)",
+              name: "metaDescriptionES",
+              widget: "text",
+            }
           - { label: "Video de portada", name: "coverVideo", widget: "string" }
           - { label: "Pie de página", name: "pageFooter", widget: "string" }
           - label: "Orden de proyectos EN"

@@ -26,15 +26,11 @@ const index = ({
       <Hide above="md">
         <Box>
           <MenuMobile isIndex={true} />
-          <HomeVideo
-            src={homeVideo}
-          />
+          <HomeVideo src={homeVideo} />
         </Box>
       </Hide>
       <Show above="md">
-        <HomeVideo
-          src={homeVideo}
-        />
+        <HomeVideo src={homeVideo} />
         <MenuDesktop menuCategories={menuData.categoriesList} isIndex={true} />
       </Show>
       <WorksList

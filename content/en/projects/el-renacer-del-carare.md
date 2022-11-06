@@ -21,7 +21,8 @@ content:
   - type: imageBlock
     image: https://ucarecdn.com/d7674b92-b959-4d1a-a07a-edf13cbead2b/
   - type: textBlock
-    text: The Rebirth of Carare is a 19 pages script for a slide shots presentation
+    text:
+      The Rebirth of Carare is a 19 pages script for a slide shots presentation
       (diaporama) made around 1987 by the Association of Rural Workers of Carare
       (ATCC) and CELA Productions. Its fundamental purpose was to become an
       audiovisual manifesto that would allow the organization to expose the

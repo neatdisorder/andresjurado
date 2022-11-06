@@ -2,7 +2,7 @@ const styles = {
   projectsContainer: {
     px: { md: "58px", lg: "77px" },
     flexWrap: "wrap",
-    minHeight: "50vh"
+    minHeight: "50vh",
   },
   projectsHeading: {
     display: "inline",
@@ -16,7 +16,7 @@ const styles = {
       cursor: "default",
       display: "inline-block",
       marginLeft: "0.25em",
-      marginRight: "0.25em"
+      marginRight: "0.25em",
     },
     _last: {
       _after: {
@@ -27,7 +27,7 @@ const styles = {
       textDecoration: "underline",
       textDecorationThickness: "2px",
       textUnderlineOffset: "5px",
-    }
+    },
   },
 };
 

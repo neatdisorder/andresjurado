@@ -13,7 +13,7 @@ const blocks = {
   imageBlock: ImageBlock,
   titleBlock: TitleBlock,
   vimeoBlock: VimeoBlock,
-  linksBlock: LinksBlock
+  linksBlock: LinksBlock,
 };
 
 const ProjectContent = ({ projectContent }) => {

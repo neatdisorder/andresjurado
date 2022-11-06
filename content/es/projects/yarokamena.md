@@ -47,7 +47,8 @@ content:
           image: https://ucarecdn.com/bfc09ba8-3b54-442e-8593-883f42e0494a/
           caption: ""
   - type: textBlock
-    text: Esta historia la narra Gerardo Sueche, consejero de los pueblos Uitoto,
+    text:
+      Esta historia la narra Gerardo Sueche, consejero de los pueblos Uitoto,
       atravesando retratos fílmicos de un amazonas delirante, invadida de ruinas
       tecnológicas, antenas disfuncionales, barcos fantasmas, y espectros
       coloniales alojados en la memoria oral de los sobrevivientes a este
