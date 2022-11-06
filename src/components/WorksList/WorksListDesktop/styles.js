@@ -24,9 +24,7 @@ const styles = {
       },
     },
     _hover: {
-      textDecoration: "underline",
-      textDecorationThickness: "2px",
-      textUnderlineOffset: "5px",
+      color: "white",
     },
   },
 };
