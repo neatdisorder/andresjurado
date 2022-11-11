@@ -11,7 +11,7 @@ const theme = extendTheme({
   },
   fonts: {
     heading: "Mingzat, sans-serif",
-    body: "Spectral, serif",
+    body: "Mingzat, sans-serif",
   },
   breakpoints: {
     sm: "320px",
