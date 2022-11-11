@@ -1,31 +1,31 @@
 ---
 categoriesList:
   - category:
-      color: "#ae2535"
+      color: "#ffffff"
       titleES: Film
       titleEN: Film
       url: film
       URL: film
   - category:
-      color: "#309900"
+      color: "#ffffff"
       titleES: Performance
       titleEN: Performance
       url: performance
       URL: performance
   - category:
-      color: "#ffcc00"
+      color: "#ffffff"
       titleES: Exhibición
       titleEN: Exhibition
       url: exhibition
       URL: exhibition
   - category:
-      color: "#94bb14"
+      color: "#ffffff"
       titleES: Curaduría
       titleEN: Curatorship
       url: curatorship
       URL: curatorship
   - category:
-      color: "#974de2"
+      color: "#ffffff"
       titleES: Publicación
       titleEN: Publication
       url: publication
