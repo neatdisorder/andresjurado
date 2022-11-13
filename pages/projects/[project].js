@@ -23,7 +23,7 @@ const project = ({ menuData, projectData, footerText }) => {
         <meta name="description" content={metaDescription} />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
-      <Menu menuCategories={menuData.categoriesList} isIndex={false} />
+      <Menu menuCategories={menuData.categoriesList} />
       <Project projectData={projectData} />
       <Footer footerText={footerText} />
     </>

@@ -15,7 +15,7 @@ const page = ({ menuData, pageData, footerText, metaDescription }) => {
         <meta name="description" content={metaDescription} />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
-      <Menu menuCategories={menuData.categoriesList} isIndex={false} />
+      <Menu menuCategories={menuData.categoriesList} />
       <Page pageData={pageData} />
       <Footer footerText={footerText} />
     </>

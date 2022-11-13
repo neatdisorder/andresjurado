@@ -8,11 +8,6 @@ const styles = {
     fontWeight: "400",
     cursor: "pointer",
   },
-  headingIndex: {
-    fontSize: { md: "68px", lg: "90px" },
-    fontWeight: "400",
-    cursor: "pointer",
-  },
   menuLinksContainer: {
     justifyContent: "space-between",
     width: { md: "908px", lg: "1200px" },
@@ -27,12 +22,6 @@ const styles = {
       textDecorationThickness: "2px",
       textUnderlineOffset: "5px",
     },
-  },
-  menuLinksHeadingIndex: {
-    fontSize: { md: "24px", lg: "32px" },
-    fontWeight: "400",
-    cursor: "pointer",
-    textTransform: "lowercase",
   },
   menuLinksCategories: {
     fontSize: { md: "23px", lg: "31px" },

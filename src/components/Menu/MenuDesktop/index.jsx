@@ -5,18 +5,14 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 
-const MenuDesktop = ({ menuCategories, isIndex }) => {
+const MenuDesktop = ({ menuCategories }) => {
   const router = useRouter();
-
-  const headingStyles = isIndex
-    ? { ...styles.headingIndex }
-    : { ...styles.heading };
 
   return (
     <Box {...styles.menuContainer}>
       <Box>
         <Link href={"/"} passHref>
-          <Heading {...headingStyles}>ANDRÉS JURADO</Heading>
+          <Heading {...styles.heading}>ANDRÉS JURADO</Heading>
         </Link>
       </Box>
       <Flex {...styles.menuLinksContainer}>
@@ -68,7 +64,6 @@ const MenuDesktop = ({ menuCategories, isIndex }) => {
 
 MenuDesktop.propTypes = {
   menuCategories: PropTypes.array.isRequired,
-  isIndex: PropTypes.bool.isRequired,
 };
 
 export default MenuDesktop;

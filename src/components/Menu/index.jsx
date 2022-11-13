@@ -11,7 +11,7 @@ const Menu = ({ menuCategories, isIndex }) => {
         <MenuMobile isIndex={isIndex} />
       </Hide>
       <Show above="md">
-        <MenuDesktop menuCategories={menuCategories} isIndex={isIndex} />
+        <MenuDesktop menuCategories={menuCategories} />
       </Show>
     </>
   );
