@@ -1,6 +1,6 @@
 const styles = {
   footer: {
-    fontSize: { base: "10px", md: "18px", lg: "24px" },
+    fontSize: { base: "12px", md: "18px", lg: "24px" },
     marginLeft: { base: "20px", md: "58px", lg: "78px" },
     marginBottom: { base: "27px", md: "43px", lg: "57px" },
     marginTop: {

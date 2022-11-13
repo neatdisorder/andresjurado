@@ -7,7 +7,7 @@ const styles = {
   captionText: {
     textAlign: "right",
     fontFamily: "Roboto, sans-serif",
-    fontSize: { base: "10px", md: "13px", lg: "17px" },
+    fontSize: { base: "12px", md: "13px", lg: "17px" },
     fontStyle: "italic",
     marginTop: "0.5em",
   },
