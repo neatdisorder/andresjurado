@@ -2,13 +2,13 @@ const styles = {
   projectsContainer: {
     px: { md: "58px", lg: "77px" },
     flexWrap: "wrap",
-    minHeight: "50vh",
+    minHeight: { md: "40vh", lg: "50vh" },
   },
   projectsHeading: {
     display: "inline",
     textTransform: "uppercase",
     fontWeight: "400",
-    fontSize: { md: "36px", lg: "48px" },
+    fontSize: { md: "28px", lg: "40px" },
     cursor: "pointer",
     _after: {
       content: "' / '",
@@ -25,6 +25,9 @@ const styles = {
     },
     _hover: {
       color: "white",
+      textDecoration: "underline",
+      textDecorationThickness: "2px",
+      textUnderlineOffset: "5px",
     },
   },
 };
