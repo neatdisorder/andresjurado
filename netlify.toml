@@ -1,7 +1,0 @@
-[[plugins]]
-package = "@netlify/plugin-sitemap"
-
-    [plugins.inputs]
-    exclude = [
-        '/admin/index.html'
-    ]
