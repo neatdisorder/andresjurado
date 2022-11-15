@@ -8,10 +8,12 @@ import PropTypes from "prop-types";
 const MenuDesktop = ({ menuCategories }) => {
   const router = useRouter();
 
+  let isIndex = router.pathname === "/" || router.query.category !== "" ? true : false;
+
   return (
     <Box {...styles.menuContainer}>
       <Box>
-        <Link href={"/"} passHref>
+        <Link href={"/"} passHref scroll={!isIndex}>
           <Heading {...styles.heading}>ANDRÉS JURADO</Heading>
         </Link>
       </Box>
@@ -27,13 +29,13 @@ const MenuDesktop = ({ menuCategories }) => {
         )}
         <Heading {...styles.menuLinksSeparator}>&nbsp;/&nbsp;</Heading>
         {router.pathname === "/" ? (
-          <Link href={"/"} passHref>
+          <Link href={"/"} passHref scroll={!isIndex}>
             <Heading {...styles.menuLinksHeadingActive}>
               {router.locale === "en" ? "works" : "obras"}
             </Heading>
           </Link>
         ) : (
-          <Link href={"/"} passHref>
+          <Link href={"/"} passHref scroll={!isIndex}>
             <Heading {...styles.menuLinksHeading}>
               {router.locale === "en" ? "works" : "obras"}
             </Heading>
@@ -58,6 +60,7 @@ const MenuDesktop = ({ menuCategories }) => {
               }}
               key={key}
               passHref
+              scroll={!isIndex}
             >
               {router.query.category === category.category.url ? (
                 <Heading {...categoryStyleActive}>
@@ -78,21 +81,21 @@ const MenuDesktop = ({ menuCategories }) => {
         <Heading {...styles.menuLinksSeparator}>&nbsp;/&nbsp;</Heading>
         {router.locale === "en" ? (
           <>
-            <Link href={router.asPath} locale="en" passHref>
+            <Link href={router.asPath} locale="en" passHref scroll={false}>
               <Heading {...styles.menuLinksHeadingActive}>en</Heading>
             </Link>
             <Heading {...styles.menuLinksSeparator}>・</Heading>
-            <Link href={router.asPath} locale="es" passHref>
+            <Link href={router.asPath} locale="es" passHref scroll={false}>
               <Heading {...styles.menuLinksHeading}>es</Heading>
             </Link>
           </>
         ) : (
           <>
-            <Link href={router.asPath} locale="en" passHref>
+            <Link href={router.asPath} locale="en" passHref scroll={false}>
               <Heading {...styles.menuLinksHeading}>en</Heading>
             </Link>
             <Heading {...styles.menuLinksSeparator}>・</Heading>
-            <Link href={router.asPath} locale="es" passHref>
+            <Link href={router.asPath} locale="es" passHref scroll={false}>
               <Heading {...styles.menuLinksHeadingActive}>es</Heading>
             </Link>
           </>
