@@ -45,14 +45,34 @@ const MenuMobile = ({ isIndex }) => {
                 {router.locale === "en" ? "works" : "obras"}
               </Heading>
             </Link>
-            <Flex>
-              <Link href={router.asPath} locale="en">
-                <Heading {...menuMobileStyles.headingMenuLanguage}>en</Heading>
-              </Link>
-              <Link href={router.asPath} locale="es">
-                <Heading {...menuMobileStyles.headingMenuLanguage}>es</Heading>
-              </Link>
-            </Flex>
+
+            {router.locale === "en" ? (
+              <Flex>
+                <Link href={router.asPath} locale="en">
+                  <Heading {...menuMobileStyles.headingMenuLanguageActive}>
+                    en
+                  </Heading>
+                </Link>
+                <Link href={router.asPath} locale="es">
+                  <Heading {...menuMobileStyles.headingMenuLanguage}>
+                    es
+                  </Heading>
+                </Link>
+              </Flex>
+            ) : (
+              <Flex>
+                <Link href={router.asPath} locale="en">
+                  <Heading {...menuMobileStyles.headingMenuLanguage}>
+                    en
+                  </Heading>
+                </Link>
+                <Link href={router.asPath} locale="es">
+                  <Heading {...menuMobileStyles.headingMenuLanguageActive}>
+                    es
+                  </Heading>
+                </Link>
+              </Flex>
+            )}
           </AccordionPanel>
         </AccordionItem>
       </Accordion>

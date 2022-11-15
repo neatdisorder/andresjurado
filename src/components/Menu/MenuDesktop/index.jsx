@@ -16,19 +16,37 @@ const MenuDesktop = ({ menuCategories }) => {
         </Link>
       </Box>
       <Flex {...styles.menuLinksContainer}>
-        <Link href={"/bio"} passHref>
-          <Heading {...styles.menuLinksHeading}>bio</Heading>
-        </Link>
+        {router.query.page === "bio" ? (
+          <Link href={"/bio"} passHref>
+            <Heading {...styles.menuLinksHeadingActive}>bio</Heading>
+          </Link>
+        ) : (
+          <Link href={"/bio"} passHref>
+            <Heading {...styles.menuLinksHeading}>bio</Heading>
+          </Link>
+        )}
         <Heading {...styles.menuLinksSeparator}>&nbsp;/&nbsp;</Heading>
-        <Link href={"/"} passHref>
-          <Heading {...styles.menuLinksHeading}>
-            {router.locale === "en" ? "works" : "obras"}
-          </Heading>
-        </Link>
+        {router.pathname === "/" ? (
+          <Link href={"/"} passHref>
+            <Heading {...styles.menuLinksHeadingActive}>
+              {router.locale === "en" ? "works" : "obras"}
+            </Heading>
+          </Link>
+        ) : (
+          <Link href={"/"} passHref>
+            <Heading {...styles.menuLinksHeading}>
+              {router.locale === "en" ? "works" : "obras"}
+            </Heading>
+          </Link>
+        )}
         {menuCategories.map((category, key) => {
           const categoryStyle = { ...styles.menuLinksCategories };
 
           categoryStyle.color = category.category.color;
+
+          const categoryStyleActive = { ...styles.menuLinksCategoriesActive };
+
+          categoryStyleActive.color = category.category.color;
 
           return (
             <Link
@@ -41,22 +59,44 @@ const MenuDesktop = ({ menuCategories }) => {
               key={key}
               passHref
             >
-              <Heading {...categoryStyle}>
-                {router.locale === "en"
-                  ? category.category.titleEN
-                  : category.category.titleES}
-              </Heading>
+              {router.query.category === category.category.url ? (
+                <Heading {...categoryStyleActive}>
+                  {router.locale === "en"
+                    ? category.category.titleEN
+                    : category.category.titleES}
+                </Heading>
+              ) : (
+                <Heading {...categoryStyle}>
+                  {router.locale === "en"
+                    ? category.category.titleEN
+                    : category.category.titleES}
+                </Heading>
+              )}
             </Link>
           );
         })}
         <Heading {...styles.menuLinksSeparator}>&nbsp;/&nbsp;</Heading>
-        <Link href={router.asPath} locale="en" passHref>
-          <Heading {...styles.menuLinksHeading}>en</Heading>
-        </Link>
-        <Heading {...styles.menuLinksSeparator}>・</Heading>
-        <Link href={router.asPath} locale="es" passHref>
-          <Heading {...styles.menuLinksHeading}>es</Heading>
-        </Link>
+        {router.locale === "en" ? (
+          <>
+            <Link href={router.asPath} locale="en" passHref>
+              <Heading {...styles.menuLinksHeadingActive}>en</Heading>
+            </Link>
+            <Heading {...styles.menuLinksSeparator}>・</Heading>
+            <Link href={router.asPath} locale="es" passHref>
+              <Heading {...styles.menuLinksHeading}>es</Heading>
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link href={router.asPath} locale="en" passHref>
+              <Heading {...styles.menuLinksHeading}>en</Heading>
+            </Link>
+            <Heading {...styles.menuLinksSeparator}>・</Heading>
+            <Link href={router.asPath} locale="es" passHref>
+              <Heading {...styles.menuLinksHeadingActive}>es</Heading>
+            </Link>
+          </>
+        )}
       </Flex>
     </Box>
   );
