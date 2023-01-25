@@ -43,24 +43,6 @@ const styles = {
       },
     },
   },
-  headingMenuLanguageActive: {
-    fontSize: "22px",
-    fontWeight: "400",
-    cursor: "pointer",
-    textDecoration: "underline",
-    textDecorationThickness: "2px",
-    textUnderlineOffset: "5px",
-    _after: {
-      content: "'・'",
-      textDecoration: "none",
-      display: "inline-block",
-    },
-    _last: {
-      _after: {
-        content: "''",
-      },
-    },
-  },
 };
 
 export default styles;

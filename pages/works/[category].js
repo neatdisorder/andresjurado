@@ -62,7 +62,7 @@ const category = ({
             "https://res.cloudinary.com/dv2a9f43d/video/upload/q_auto:good/v1666804552/loop_bienvenidos_01_vjtwmw.mov"
           }
         />
-        <MenuDesktop menuCategories={menuData.categoriesList} />
+        <MenuDesktop menuCategories={menuData.categoriesList} isIndex={true} />
       </Show>
       <WorksList
         menuCategories={menuData.categoriesList}

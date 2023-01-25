@@ -8,6 +8,11 @@ const styles = {
     fontWeight: "400",
     cursor: "pointer",
   },
+  headingIndex: {
+    fontSize: { md: "68px", lg: "90px" },
+    fontWeight: "400",
+    cursor: "pointer",
+  },
   menuLinksContainer: {
     justifyContent: "space-between",
     width: { md: "908px", lg: "1200px" },
@@ -23,14 +28,11 @@ const styles = {
       textUnderlineOffset: "5px",
     },
   },
-  menuLinksHeadingActive: {
-    fontSize: { md: "23px", lg: "31px" },
+  menuLinksHeadingIndex: {
+    fontSize: { md: "24px", lg: "32px" },
     fontWeight: "400",
     cursor: "pointer",
     textTransform: "lowercase",
-    textDecoration: "underline",
-    textDecorationThickness: "2px",
-    textUnderlineOffset: "5px",
   },
   menuLinksCategories: {
     fontSize: { md: "23px", lg: "31px" },
@@ -52,26 +54,6 @@ const styles = {
       textDecoration: "underline",
       textDecorationThickness: "2px",
       textUnderlineOffset: "5px",
-    },
-  },
-  menuLinksCategoriesActive: {
-    fontSize: { md: "23px", lg: "31px" },
-    fontWeight: "400",
-    textTransform: "lowercase",
-    cursor: "pointer",
-    textDecoration: "underline",
-    textDecorationThickness: "2px",
-    textUnderlineOffset: "5px",
-    _before: {
-      content: "'・'",
-      color: "white",
-      display: "inline-block",
-      cursor: "default",
-    },
-    _last: {
-      _after: {
-        content: "''",
-      },
     },
   },
   menuLinksSeparator: {

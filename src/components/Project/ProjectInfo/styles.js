@@ -12,7 +12,7 @@ const styles = {
     my: { base: "12px", md: "16px", lg: "21px" },
   },
   projectSpecs: {
-    fontSize: { base: "14px", md: "17px", lg: "22px" },
+    fontSize: { base: "12px", md: "17px", lg: "22px" },
     fontWeight: "400",
     textTransform: "uppercase",
     display: "inline",
@@ -30,7 +30,7 @@ const styles = {
   },
   projectCredits: {
     bold: {
-      fontSize: { base: "13px", md: "15px", lg: "20px" },
+      fontSize: { base: "11px", md: "15px", lg: "20px" },
       fontFamily: "Roboto, sans-serif",
       fontWeight: "bold",
       display: "inline",
@@ -39,7 +39,7 @@ const styles = {
       },
     },
     regular: {
-      fontSize: { base: "13px", md: "15px", lg: "20px" },
+      fontSize: { base: "11px", md: "15px", lg: "20px" },
       fontFamily: "Roboto, sans-serif",
       fontWeight: "400",
       display: "inline",

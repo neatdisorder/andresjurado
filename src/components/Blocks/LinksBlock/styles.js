@@ -6,7 +6,7 @@ const styles = {
   linkText: {
     textDecoration: "underline",
     fontSize: {
-      base: "14px",
+      base: "12px",
       md: "16px",
       lg: "21px",
     },

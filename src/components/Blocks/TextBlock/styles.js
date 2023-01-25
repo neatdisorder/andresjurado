@@ -5,7 +5,7 @@ const styles = {
     },
     marginBottom: { base: "25px", md: "38px", lg: "50px" },
     fontSize: {
-      base: "14px",
+      base: "12px",
       md: "16px",
       lg: "21px",
     },
