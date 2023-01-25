@@ -428,4 +428,4 @@ collections:
                       widget: "color",
                       default: "#FFFFFF",
                     }
-                  - { label: "url", name: "URL", widget: "string" }
+                  - { label: "url", name: "url", widget: "string" }
