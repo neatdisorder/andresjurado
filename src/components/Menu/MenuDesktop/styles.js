@@ -2,6 +2,7 @@ const styles = {
   menuContainer: {
     px: { md: "58px", lg: "77px" },
     py: { md: "38px", lg: "51px" },
+    display: { base: "none", md: "block" },
   },
   heading: {
     fontSize: { md: "47px", lg: "63px" },

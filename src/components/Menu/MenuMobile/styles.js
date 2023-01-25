@@ -8,7 +8,7 @@ const styles = {
   accordionButtonContainer: {
     width: "100%",
     padding: "20px",
-    display: "flex",
+    display: { base: "flex", md: "none"},
     justify: "space-between",
     align: "center",
   },

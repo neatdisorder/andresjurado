@@ -3,6 +3,7 @@ const styles = {
     px: { md: "58px", lg: "77px" },
     flexWrap: "wrap",
     minHeight: "50vh",
+    display: { base: "none", md: "block" },
   },
   projectsHeading: {
     display: "inline",

@@ -1,7 +1,7 @@
 import React from "react";
 import WorksListDesktop from "./WorksListDesktop";
 import WorksListMobile from "./WorksListMobile";
-import { Show, Hide } from "@chakra-ui/react";
+import { Show } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 
 const WorksList = ({ menuCategories, menuProjectOrder, projectData }) => {
@@ -15,12 +15,12 @@ const WorksList = ({ menuCategories, menuProjectOrder, projectData }) => {
 
   return (
     <>
-      <Hide above="md">
+      <Show below="md">
         <WorksListMobile
           menuCategories={menuCategories}
           menuProjects={sortedProjects}
         />
-      </Hide>
+      </Show>
       <Show above="md">
         <WorksListDesktop menuProjects={sortedProjects} />
       </Show>

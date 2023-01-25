@@ -1,6 +1,7 @@
 const styles = {
   worksListContainer: {
     padding: "20px",
+    display: { base: "block", md: "none" },
   },
   categoryHeading: {
     textTransform: "lowercase",

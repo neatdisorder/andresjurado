@@ -1,15 +1,15 @@
 import React from "react";
 import MenuDesktop from "./MenuDesktop";
 import MenuMobile from "./MenuMobile";
-import { Show, Hide } from "@chakra-ui/react";
+import { Show } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 
 const Menu = ({ menuCategories, isIndex }) => {
   return (
     <>
-      <Hide above="md">
+      <Show below="md">
         <MenuMobile isIndex={isIndex} />
-      </Hide>
+      </Show>
       <Show above="md">
         <MenuDesktop menuCategories={menuCategories} isIndex={isIndex} />
       </Show>
